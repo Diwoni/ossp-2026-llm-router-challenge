@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "artifact_type": "os-skt-method4-release-v1",
+  "repository": "Diwoni/ossp-2026-llm-router-challenge",
+  "release_tag": "method4-assets-v1",
+  "archive": {
+    "filename": "method4-assets-v1.tar.gz",
+    "size": 376520961,
+    "sha256": "d320179bd0c1f22cfcfb2711964d1bed21fa67fcab95af69a8587f9c49044b3a"
+  },
+  "unpacked_manifest": {
+    "path": "artifacts/method4-assets.manifest.v1.json",
+    "size": 636519519,
+    "sha256": "4a71b9c4cf9bdf8575d6f46b6069304c962d9a312f74ae8559f7d6476c55b32b"
+  }
+}
