@@ -16,6 +16,9 @@ from experiments.method4_finetuned_encoder.final_route import (
 )
 from experiments.method4_finetuned_encoder.residual import predict_residual
 from experiments.method4_finetuned_encoder.similarity import predict_similarity_delta
+from experiments.method4_finetuned_encoder.teacher_student import (
+    apply_absolute_student,
+)
 
 
 class _Tokenizer:
@@ -137,6 +140,28 @@ class Method4RouterTest(unittest.TestCase):
             allowed_model_ids=("ax31-light", "ax31"),
         )
         self.assertNotIn("axk1-think", selected)
+
+    def test_teacher_student_uses_existing_runtime_features_only(self) -> None:
+        import numpy as np
+
+        # E5 임베딩 2차원과 내용 기반 profile 20차원을 결합한 22차원 학생입니다.
+        artifact = {
+            "feature_mean": [0.0] * 22,
+            "feature_scale": [1.0] * 22,
+            "intercept": [0.5, 0.25],
+            "coefficients": [[0.0, 0.0] for _ in range(22)],
+        }
+        replaced, mask = apply_absolute_student(
+            np.asarray([[0.1, 0.2]]),
+            np.asarray([[1.0, 0.0]]),
+            [{"text": "How many apples are left?", "message_count": 1}],
+            artifact,
+            weight=1.0,
+            mode="all",
+            fraction=1.0,
+        )
+        np.testing.assert_allclose(replaced, [[0.5, 0.25]])
+        self.assertEqual([True], mask.tolist())
 
 
 if __name__ == "__main__":
