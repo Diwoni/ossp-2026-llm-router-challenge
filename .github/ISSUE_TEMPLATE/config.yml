@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 공식 과제 문의
+    url: https://github.com/sktelecom/ossp-2026-llm-router-challenge/issues
+    about: 과제 규칙이나 공식 하네스 문제는 upstream에 문의합니다.

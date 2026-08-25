@@ -1,0 +1,32 @@
+name: 실험 제안 및 결과
+description: 라우터 후보의 가설, 검증 방법, 채택 결과를 기록합니다.
+title: "[실험] "
+labels:
+  - 실험
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: 가설
+      description: 무엇을 바꾸면 왜 좋아질 것으로 예상하는지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: 실험 방법
+      description: 대조군, 변경 변수, 학습 분할과 평가 분할을 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: 채택 기준
+      description: 성능, 비용, 실행 시간에서 통과해야 할 기준을 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 결과와 판단
+      description: 재현 명령, 결과 JSON 경로, 채택 또는 기각 이유를 적어주세요.
