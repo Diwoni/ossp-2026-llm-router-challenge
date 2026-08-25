@@ -1,0 +1,10 @@
+# 학습에만 사용하는 의존성입니다. 최종 컨테이너는 후보를 확정한 뒤 별도로
+# 버전을 고정한 ARM64 호환 추론 의존성만 사용합니다.
+numpy>=1.26,<3
+safetensors>=0.4,<1
+scikit-learn>=1.4,<2
+torch>=2.2,<3
+transformers>=4.40,<6
+onnx>=1.16,<2
+onnxruntime>=1.18,<2
+onnxscript>=0.1,<1
