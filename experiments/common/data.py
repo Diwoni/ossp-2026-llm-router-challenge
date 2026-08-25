@@ -110,6 +110,32 @@ def load_examples(input_path: Path, outcomes_path: Path) -> list[dict[str, Any]]
     return examples
 
 
+def aligned_outcomes(input_path: Path, outcomes_path: Path) -> dict[str, Any]:
+    """입력에 실제로 존재하는 공개 outcome만 ID 순서로 정렬합니다.
+
+    이 함수는 오프라인 공식 채점기 입력을 만들 때만 사용합니다. 반환값은
+    라우터 학습 특징이나 제출 컨테이너 입력에 포함하지 않습니다.
+    """
+
+    inputs = load_json(input_path)
+    outcomes = load_json(outcomes_path)
+    episode_ids = {episode["episode_id"] for episode in inputs["episodes"]}
+    rows = [
+        row for row in outcomes["episodes"] if row.get("episode_id") in episode_ids
+    ]
+    if len(rows) != len(episode_ids):
+        raise ValueError(
+            f"연결한 outcome 수가 다릅니다: {len(rows)} != {len(episode_ids)}"
+        )
+    rows.sort(key=lambda row: row["episode_id"])
+    return {
+        "challenge_id": inputs["challenge_id"],
+        "episodes": rows,
+        "schema_version": inputs["schema_version"],
+        "split": inputs["split"],
+    }
+
+
 def choose_existing_input(root: Path, split: str) -> Path:
     """재현한 전체 입력이 있으면 사용하고, 없으면 base 입력을 반환합니다."""
 
