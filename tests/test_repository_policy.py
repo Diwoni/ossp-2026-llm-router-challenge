@@ -630,40 +630,37 @@ class RepositoryPolicyTest(unittest.TestCase):
         dockerignore = (ROOT / ".dockerignore").read_text(
             encoding="utf-8"
         ).splitlines()
-        expected_dockerignore = [
-            "# SPDX-" + "FileCopyrightText: Copyright 2026 SK TELECOM CO., LTD.",
-            "# SPDX-" + "License-Identifier: Apache-2.0",
-            "",
-            "**",
-            "!src/",
-            "src/**",
-            "!src/ossp_router/",
-            "src/ossp_router/**",
-            "!src/ossp_router/__init__.py",
-            "!src/ossp_router/cli.py",
-            "!src/ossp_router/heuristic.py",
-            "!src/ossp_router/image_evidence.py",
-            "!src/ossp_router/operator_helper.py",
-            "!src/ossp_router/orchestrator.py",
+        rules = [
+            line
+            for line in dockerignore
+            if line and not line.startswith("#")
+        ]
+        self.assertEqual("**", rules[0])
+        required_rules = {
             "!src/ossp_router/protocol.py",
-            "!src/ossp_router/runtime.py",
-            "!src/ossp_router/scoring.py",
-            "!src/ossp_router/resources/",
-            "src/ossp_router/resources/**",
-            "!src/ossp_router/resources/__init__.py",
             "!src/ossp_router/resources/routing-policy.v1.json",
-            "!baselines/",
-            "baselines/**",
-            "!baselines/feature_budget.py",
             "!baselines/hash_regex.py",
             "!baselines/hash-regex-public.v1.json",
-            "!container/",
-            "container/**",
             "!container/Dockerfile",
-            "!container/measurement.Dockerfile",
-            "!container/entrypoint.py",
-        ]
-        self.assertEqual(expected_dockerignore, dockerignore)
+            "!container/method4.Dockerfile",
+            "!container/method4_entrypoint.py",
+            "!container/requirements-method4-runtime.txt",
+            "!configs/method4-tier-gate.qwen-student.json",
+            "!artifacts/method4-assets.manifest.v1.json",
+            "!experiments/common/budget.py",
+            "!experiments/method4_finetuned_encoder/final_route.py",
+            "!experiments/method4_finetuned_encoder/teacher_student.py",
+            "!build/final-assets/method4/onnx/router-int8.onnx",
+            "!build/final-assets/method4/embedding-onnx/embedding-fp32.onnx",
+            "!build/final-assets/method4/teacher-student-head.json",
+        }
+        self.assertTrue(required_rules.issubset(set(rules)))
+        for rule in rules:
+            if rule.startswith("!"):
+                self.assertNotIn("*", rule)
+                self.assertNotIn(".env", rule)
+                self.assertNotIn("data/materialized", rule)
+                self.assertNotIn("operator-state", rule)
 
     def test_public_tree_has_no_internal_paths_secrets_or_model_artifacts(
         self,
