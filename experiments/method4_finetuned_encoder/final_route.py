@@ -31,6 +31,9 @@ from experiments.method4_finetuned_encoder.stacking import (
     feature_matrix,
     predict_ridge,
 )
+from experiments.method4_finetuned_encoder.teacher_student import (
+    apply_absolute_student,
+)
 from experiments.method4_finetuned_encoder.training import (
     device_name,
     load_artifact,
@@ -299,6 +302,24 @@ def _similarity_residual_decisions(args, inputs, hash_artifact, gate):
     similarity_delta = _similarity_delta(
         args, examples, gate, router_embeddings=router_embeddings
     )
+    teacher_student_weight = float(gate.get("teacher_student_weight", 0.0))
+    if teacher_student_weight > 0.0:
+        if args.teacher_student_artifact is None:
+            raise ValueError("교사-학생 라우팅에는 학생 head 자산이 필요합니다")
+        if router_embeddings is None:
+            raise ValueError("교사-학생 라우팅에는 E5 라우터 임베딩이 필요합니다")
+        teacher_student = load_json(args.teacher_student_artifact)
+        if str(teacher_student.get("target_kind", "absolute")) != "absolute":
+            raise ValueError("런타임 보정기는 absolute 학생 출력만 지원합니다")
+        similarity_delta, _student_mask = apply_absolute_student(
+            similarity_delta,
+            router_embeddings,
+            examples,
+            teacher_student,
+            weight=teacher_student_weight,
+            mode=str(gate.get("teacher_student_mode", "disagreement")),
+            fraction=float(gate.get("teacher_student_fraction", 0.05)),
+        )
     residual_weight = float(gate.get("residual_weight", 0.0))
     delta = residual_weight * residual_delta + (1.0 - residual_weight) * similarity_delta
     if args.tier == "fast":
@@ -368,6 +389,7 @@ def main() -> int:
     parser.add_argument("--residual-artifact", type=Path)
     parser.add_argument("--similarity-artifact", type=Path)
     parser.add_argument("--cost-calibration-artifact", type=Path)
+    parser.add_argument("--teacher-student-artifact", type=Path)
     parser.add_argument("--tier-gate", type=Path, required=True)
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--threads", type=int, default=2)

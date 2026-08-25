@@ -1,0 +1,42 @@
+{
+  "artifact_type": "os-skt-method4-tier-gate-final-public-all-qwen-tiebreak",
+  "fast": {
+    "router": "similarity-residual",
+    "safety_ratio": 0.95,
+    "decision_round_decimals": 4,
+    "similarity_neighbors": 10,
+    "similarity_temperature": 0.03,
+    "similarity_source_bonus": 0.03,
+    "secondary_embedding_weight": 1.0,
+    "embedding_model_filename": "embedding-fp32.onnx",
+    "residual_weight": 0.0,
+    "allowed_model_ids": ["ax31-light", "ax31"]
+  },
+  "balanced": {
+    "router": "similarity-residual",
+    "safety_ratio": 0.90,
+    "decision_round_decimals": 4,
+    "similarity_neighbors": 10,
+    "similarity_temperature": 0.03,
+    "similarity_source_bonus": 0.0,
+    "secondary_embedding_weight": 1.0,
+    "embedding_model_filename": "embedding-fp32.onnx",
+    "residual_weight": 0.5,
+    "teacher_student_weight": 0.75,
+    "teacher_student_mode": "all",
+    "teacher_student_fraction": 1.0,
+    "allowed_model_ids": ["ax31-light", "ax31", "axk1-think"]
+  },
+  "premium": {
+    "router": "similarity-hash",
+    "safety_ratio": 0.84,
+    "decision_round_decimals": 4,
+    "similarity_neighbors": 20,
+    "similarity_temperature": 0.15,
+    "similarity_source_bonus": 0.0,
+    "embedding_model_filename": "embedding-fp32.onnx",
+    "similarity_weight": 0.2,
+    "allowed_model_ids": ["ax31-light", "ax31", "axk1-think"]
+  }
+}
+

@@ -19,6 +19,20 @@ Apache-2.0의 Hugging Face tokenizers와 FlatBuffers를 사용합니다. 정확�
 버전과 최종 파생 자산 SHA-256은 Docker 제출 PR에서 다시 고정합니다. 프로젝트의
 Apache-2.0 라이선스는 이 제3자 모델과 런타임을 재라이선스하지 않습니다.
 
+## 오프라인 Qwen 교사 모델
+
+최종 Balanced 라우터의 작은 학생 head를 만들 때 Apache-2.0 라이선스의
+[`Qwen/Qwen3-Embedding-0.6B`](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B)를
+오프라인 교사로만 사용했습니다. 리비전은
+`97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3`, 원본 가중치 SHA-256은
+`0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd`로
+고정했습니다. 외부 학습 자료는 사용하지 않았으며 공식 공개 Train·Dev 프롬프트의
+표현을 만드는 데만 사용했습니다.
+
+Qwen 가중치와 Qwen 실행 코드는 제출 이미지에 포함되지 않습니다. 제출 런타임에는
+기존 E5 임베딩과 내용 기반 피처로 Qwen 교사의 라우팅 신호를 모방하는 약 22KB의
+Ridge 계수만 포함됩니다. 따라서 평가 중 네트워크 호출이나 Qwen 추론은 없습니다.
+
 This notice applies to the adapted public prompts in
 `data/train/inputs-base.json` and `data/dev/inputs-base.json`. Those files are
 collections. Each source-derived part retains the license below; the project
