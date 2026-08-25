@@ -1,0 +1,1965 @@
+{
+  "artifact_type": "os-skt-final-cost-robustness-v1",
+  "episodes": 2640,
+  "family_counts": {
+    "aime": 36,
+    "babilong": 240,
+    "belebele": 483,
+    "cruxeval": 360,
+    "deepmind-mathematics": 456,
+    "gsm8k": 333,
+    "hrmcr": 60,
+    "ruletaker": 423,
+    "truthfulqa": 249
+  },
+  "family_multiplier": 3.0,
+  "cost_profiles": {
+    "기준비용": {
+      "model_multipliers": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "four_generation_multiplier": 1.0
+    },
+    "모델상관오차": {
+      "model_multipliers": [
+        1.0,
+        1.05,
+        1.1
+      ],
+      "four_generation_multiplier": 1.0
+    },
+    "4회생성오차": {
+      "model_multipliers": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "four_generation_multiplier": 1.1
+    },
+    "결합최악오차": {
+      "model_multipliers": [
+        1.0,
+        1.05,
+        1.1
+      ],
+      "four_generation_multiplier": 1.1
+    }
+  },
+  "scenario_count": 228,
+  "budget_failure_count": 2,
+  "passed": false,
+  "tiers": {
+    "fast": {
+      "base": {
+        "cost_profile": "기준비용",
+        "family_profile": "기준",
+        "quality_score": 0.6774621212121212,
+        "cost_ratio": 1.1963517645531268,
+        "budget_limit": 1.25,
+        "budget_passed": true
+      },
+      "worst": {
+        "cost_profile": "결합최악오차",
+        "family_profile": "aime-증가",
+        "quality_score": 0.6624262536873157,
+        "cost_ratio": 1.2277128743544468,
+        "budget_limit": 1.25,
+        "budget_passed": true
+      },
+      "scenario_count": 76,
+      "budget_failure_count": 0,
+      "scenarios": [
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "기준",
+          "quality_score": 0.6774621212121212,
+          "cost_ratio": 1.1963517645531268,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6624262536873157,
+          "cost_ratio": 1.1961895491262817,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "aime-감소",
+          "quality_score": 0.682658002038736,
+          "cost_ratio": 1.196420332506772,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6626602564102564,
+          "cost_ratio": 1.203128474249168,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6836693548387094,
+          "cost_ratio": 1.1905031881718318,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7300332778702163,
+          "cost_ratio": 1.1973306160039137,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6502013229795777,
+          "cost_ratio": 1.1960061678774454,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6373511904761905,
+          "cost_ratio": 1.1954077692922451,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.6961805555555545,
+          "cost_ratio": 1.196687656994142,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6242961711711712,
+          "cost_ratio": 1.1990867030282022,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7044092465753413,
+          "cost_ratio": 1.1950353162852767,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7294313369630974,
+          "cost_ratio": 1.1871697209505792,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6537772263578698,
+          "cost_ratio": 1.2006674112440539,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6490942028985507,
+          "cost_ratio": 1.1945567543690736,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6875,
+          "cost_ratio": 1.1969700386267854,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.6969305794606999,
+          "cost_ratio": 1.1932468905872151,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.667868249929317,
+          "cost_ratio": 1.1976464987758708,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.6964627151051626,
+          "cost_ratio": 1.1975392567097998,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.669428725410937,
+          "cost_ratio": 1.1959100511773404,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "기준",
+          "quality_score": 0.6774621212121212,
+          "cost_ratio": 1.214341986670375,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6624262536873157,
+          "cost_ratio": 1.2143349227514075,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.682658002038736,
+          "cost_ratio": 1.214344972566834,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6626602564102564,
+          "cost_ratio": 1.2220655336411987,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6836693548387094,
+          "cost_ratio": 1.20767625117048,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7300332778702163,
+          "cost_ratio": 1.2152534089958273,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6502013229795777,
+          "cost_ratio": 1.2140201967546889,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6373511904761905,
+          "cost_ratio": 1.2132732148262233,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.6961805555555545,
+          "cost_ratio": 1.2147222771215005,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6242961711711712,
+          "cost_ratio": 1.2165338472628298,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7044092465753413,
+          "cost_ratio": 1.2132869460884361,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7294313369630974,
+          "cost_ratio": 1.2046911771279911,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6537772263578698,
+          "cost_ratio": 1.2188779577536313,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6490942028985507,
+          "cost_ratio": 1.2123872168173144,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6875,
+          "cost_ratio": 1.2150152884325907,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.6969305794606999,
+          "cost_ratio": 1.210664040007688,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.667868249929317,
+          "cost_ratio": 1.2158756925360208,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.6964627151051626,
+          "cost_ratio": 1.2159040339700016,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.669428725410937,
+          "cost_ratio": 1.213760949413009,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "기준",
+          "quality_score": 0.6774621212121212,
+          "cost_ratio": 1.2043446751974953,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6624262536873157,
+          "cost_ratio": 1.2089304554148907,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.682658002038736,
+          "cost_ratio": 1.2024062802403688,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6626602564102564,
+          "cost_ratio": 1.207442036084421,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6836693548387094,
+          "cost_ratio": 1.2016715266430893,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7300332778702163,
+          "cost_ratio": 1.204988527865401,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6502013229795777,
+          "cost_ratio": 1.204117354349702,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6373511904761905,
+          "cost_ratio": 1.2030218346796697,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.6961805555555545,
+          "cost_ratio": 1.2048153683768135,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6242961711711712,
+          "cost_ratio": 1.2052362747608623,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7044092465753413,
+          "cost_ratio": 1.203915508431404,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7294313369630974,
+          "cost_ratio": 1.2003290612979933,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6537772263578698,
+          "cost_ratio": 1.2062320514274025,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6490942028985507,
+          "cost_ratio": 1.2023563558133015,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6875,
+          "cost_ratio": 1.2050295327745286,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.6969305794606999,
+          "cost_ratio": 1.2000370245205825,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.667868249929317,
+          "cost_ratio": 1.2061409679978652,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.6964627151051626,
+          "cost_ratio": 1.2049094740023363,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.669428725410937,
+          "cost_ratio": 1.204134586073685,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "기준",
+          "quality_score": 0.6774621212121212,
+          "cost_ratio": 1.2227345428469618,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6624262536873157,
+          "cost_ratio": 1.2277128743544468,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.682658002038736,
+          "cost_ratio": 1.2206302176871109,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6626602564102564,
+          "cost_ratio": 1.2265947735682148,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6836693548387094,
+          "cost_ratio": 1.2194030065653012,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7300332778702163,
+          "cost_ratio": 1.223294216450389,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6502013229795777,
+          "cost_ratio": 1.2225369425505574,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6373511904761905,
+          "cost_ratio": 1.2212679834830191,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.6961805555555545,
+          "cost_ratio": 1.2232563740733045,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6242961711711712,
+          "cost_ratio": 1.2229908975821238,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7044092465753413,
+          "cost_ratio": 1.2226111478418697,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7294313369630974,
+          "cost_ratio": 1.2185084844927763,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6537772263578698,
+          "cost_ratio": 1.2247208299461492,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6490942028985507,
+          "cost_ratio": 1.2205767983337534,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6875,
+          "cost_ratio": 1.2234777572877207,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.6969305794606999,
+          "cost_ratio": 1.2177936806377239,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.667868249929317,
+          "cost_ratio": 1.2247948852191146,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.6964627151051626,
+          "cost_ratio": 1.2236427621271655,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.669428725410937,
+          "cost_ratio": 1.2223967110541711,
+          "budget_limit": 1.25,
+          "budget_passed": true
+        }
+      ]
+    },
+    "balanced": {
+      "base": {
+        "cost_profile": "기준비용",
+        "family_profile": "기준",
+        "quality_score": 0.6879734848484849,
+        "cost_ratio": 1.747758588114143,
+        "budget_limit": 2.0,
+        "budget_passed": true
+      },
+      "worst": {
+        "cost_profile": "결합최악오차",
+        "family_profile": "babilong-증가",
+        "quality_score": 0.668349358974359,
+        "cost_ratio": 1.8830066118338762,
+        "budget_limit": 2.0,
+        "budget_passed": true
+      },
+      "scenario_count": 76,
+      "budget_failure_count": 0,
+      "scenarios": [
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "기준",
+          "quality_score": 0.6879734848484849,
+          "cost_ratio": 1.747758588114143,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6730272861356932,
+          "cost_ratio": 1.6860243643034023,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "aime-감소",
+          "quality_score": 0.693138379204893,
+          "cost_ratio": 1.7738534514621587,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.668349358974359,
+          "cost_ratio": 1.7890685803750275,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6962029569892471,
+          "cost_ratio": 1.712106382857381,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7413338879645036,
+          "cost_ratio": 1.7515293716831757,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6603034224906503,
+          "cost_ratio": 1.7464272622371377,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6497767857142858,
+          "cost_ratio": 1.75844900327232,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7057986111111099,
+          "cost_ratio": 1.7439547240570574,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6323902027027027,
+          "cost_ratio": 1.7619109817650023,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7161458333333321,
+          "cost_ratio": 1.7409464077753758,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7376739261947973,
+          "cost_ratio": 1.7124217641348298,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6653225806451595,
+          "cost_ratio": 1.7643672271138393,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6609601449275362,
+          "cost_ratio": 1.7468837855524066,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6975320512820513,
+          "cost_ratio": 1.748059905481753,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7100545037292025,
+          "cost_ratio": 1.753115476558553,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.6770921685043809,
+          "cost_ratio": 1.745524762563562,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.7097673677501594,
+          "cost_ratio": 1.7505731711127401,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.6787590945836663,
+          "cost_ratio": 1.746711643129488,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "기준",
+          "quality_score": 0.6879734848484849,
+          "cost_ratio": 1.8224055443637652,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6730272861356932,
+          "cost_ratio": 1.757496302677286,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.693138379204893,
+          "cost_ratio": 1.8498424778388618,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.668349358974359,
+          "cost_ratio": 1.867741660274644,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6962029569892471,
+          "cost_ratio": 1.7832786304735087,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7413338879645036,
+          "cost_ratio": 1.8258164995789183,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6603034224906503,
+          "cost_ratio": 1.8212012607287866,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6497767857142858,
+          "cost_ratio": 1.8332311084829287,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7057986111111099,
+          "cost_ratio": 1.8185535915966151,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6323902027027027,
+          "cost_ratio": 1.8381198436211887,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7161458333333321,
+          "cost_ratio": 1.8148415489662488,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7376739261947973,
+          "cost_ratio": 1.783803778498389,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6653225806451595,
+          "cost_ratio": 1.8405487367000146,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6609601449275362,
+          "cost_ratio": 1.821384233025873,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6975320512820513,
+          "cost_ratio": 1.8227573252767455,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7100545037292025,
+          "cost_ratio": 1.825870572011967,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.6770921685043809,
+          "cost_ratio": 1.8209606258491573,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.7097673677501594,
+          "cost_ratio": 1.8262061882159064,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.6787590945836663,
+          "cost_ratio": 1.8209918127305431,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "기준",
+          "quality_score": 0.6879734848484849,
+          "cost_ratio": 1.774697190566132,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6730272861356932,
+          "cost_ratio": 1.7260135421976215,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.693138379204893,
+          "cost_ratio": 1.7952756164867976,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.668349358974359,
+          "cost_ratio": 1.8036066294790596,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6962029569892471,
+          "cost_ratio": 1.7497471677369716,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7413338879645036,
+          "cost_ratio": 1.7773389237259387,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6603034224906503,
+          "cost_ratio": 1.7737644911280936,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6497767857142858,
+          "cost_ratio": 1.7841107790185318,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7057986111111099,
+          "cost_ratio": 1.7713476470514546,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6323902027027027,
+          "cost_ratio": 1.7826369570106864,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7161458333333321,
+          "cost_ratio": 1.7708754256970696,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7376739261947973,
+          "cost_ratio": 1.7595156535377536,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6653225806451595,
+          "cost_ratio": 1.7818326554882882,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6609601449275362,
+          "cost_ratio": 1.7731708756924713,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6975320512820513,
+          "cost_ratio": 1.7752229151124368,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7100545037292025,
+          "cost_ratio": 1.7760003462593812,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.6770921685043809,
+          "cost_ratio": 1.7741537738953954,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.7097673677501594,
+          "cost_ratio": 1.7754131027049103,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.6787590945836663,
+          "cost_ratio": 1.7744308915713862,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "기준",
+          "quality_score": 0.6879734848484849,
+          "cost_ratio": 1.8506910769383536,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.6730272861356932,
+          "cost_ratio": 1.799484939466215,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.693138379204893,
+          "cost_ratio": 1.8723357511147316,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.668349358974359,
+          "cost_ratio": 1.8830066118338762,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.6962029569892471,
+          "cost_ratio": 1.822801454597076,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7413338879645036,
+          "cost_ratio": 1.8529165292238186,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6603034224906503,
+          "cost_ratio": 1.8499053510642895,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6497767857142858,
+          "cost_ratio": 1.8601759730164502,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7057986111111099,
+          "cost_ratio": 1.8473161607407305,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6323902027027027,
+          "cost_ratio": 1.859882117629156,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.7161458333333321,
+          "cost_ratio": 1.846267017784026,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7376739261947973,
+          "cost_ratio": 1.8332523623714587,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6653225806451595,
+          "cost_ratio": 1.8588874364931867,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6609601449275362,
+          "cost_ratio": 1.848985677672941,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.6975320512820513,
+          "cost_ratio": 1.851278485388963,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7100545037292025,
+          "cost_ratio": 1.849899685197837,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.6770921685043809,
+          "cost_ratio": 1.8510210877475828,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.7097673677501594,
+          "cost_ratio": 1.8522881163876832,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.6787590945836663,
+          "cost_ratio": 1.8500970235945353,
+          "budget_limit": 2.0,
+          "budget_passed": true
+        }
+      ]
+    },
+    "premium": {
+      "base": {
+        "cost_profile": "기준비용",
+        "family_profile": "기준",
+        "quality_score": 0.7180871212121213,
+        "cost_ratio": 3.4096402475923573,
+        "budget_limit": 4.0,
+        "budget_passed": true
+      },
+      "worst": {
+        "cost_profile": "결합최악오차",
+        "family_profile": "aime-증가",
+        "quality_score": 0.703632005899705,
+        "cost_ratio": 4.194911980419607,
+        "budget_limit": 4.0,
+        "budget_passed": false
+      },
+      "scenario_count": 76,
+      "budget_failure_count": 2,
+      "scenarios": [
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "기준",
+          "quality_score": 0.7180871212121213,
+          "cost_ratio": 3.4096402475923573,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "aime-증가",
+          "quality_score": 0.703632005899705,
+          "cost_ratio": 3.744267884930426,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "aime-감소",
+          "quality_score": 0.7230823139653415,
+          "cost_ratio": 3.2681941917453616,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6954326923076923,
+          "cost_ratio": 3.2035094263213906,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.7275873655913978,
+          "cost_ratio": 3.587539538962052,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7678175263449806,
+          "cost_ratio": 3.4238983755787538,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6922993960310586,
+          "cost_ratio": 3.4046062236558634,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6781994047619048,
+          "cost_ratio": 3.4436197015898387,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7367013888888881,
+          "cost_ratio": 3.397549676568882,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6727899774774775,
+          "cost_ratio": 3.426383676604086,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.741045947488583,
+          "cost_ratio": 3.401580885993823,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7630822746521476,
+          "cost_ratio": 3.380176781276207,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6975806451612886,
+          "cost_ratio": 3.423488353353401,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6901268115942029,
+          "cost_ratio": 3.418478924172938,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.7279807692307694,
+          "cost_ratio": 3.406595850059817,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7380235226620768,
+          "cost_ratio": 3.3346804753462753,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.7082626519649389,
+          "cost_ratio": 3.4408985155676692,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.744980879541109,
+          "cost_ratio": 3.4362130700752997,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "기준비용",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.7067165184586324,
+          "cost_ratio": 3.399755911887783,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "기준",
+          "quality_score": 0.7180871212121213,
+          "cost_ratio": 3.6570735693997696,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.703632005899705,
+          "cost_ratio": 4.026284895120731,
+          "budget_limit": 4.0,
+          "budget_passed": false
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.7230823139653415,
+          "cost_ratio": 3.5010090966242773,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6954326923076923,
+          "cost_ratio": 3.433433795200599,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.7275873655913978,
+          "cost_ratio": 3.850083800023198,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7678175263449806,
+          "cost_ratio": 3.671593937044499,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6922993960310586,
+          "cost_ratio": 3.6519469582233137,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6781994047619048,
+          "cost_ratio": 3.692971754687324,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7367013888888881,
+          "cost_ratio": 3.6443002753125397,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6727899774774775,
+          "cost_ratio": 3.67556601002681,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.741045947488583,
+          "cost_ratio": 3.6481723302480686,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7630822746521476,
+          "cost_ratio": 3.6263331598118387,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6975806451612886,
+          "cost_ratio": 3.671521850486029,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6901268115942029,
+          "cost_ratio": 3.6663258801540093,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.7279807692307694,
+          "cost_ratio": 3.6538866995359682,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7380235226620768,
+          "cost_ratio": 3.5684878508929,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.7082626519649389,
+          "cost_ratio": 3.6940138647728973,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.744980879541109,
+          "cost_ratio": 3.6873630392777894,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "모델상관오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.7067165184586324,
+          "cost_ratio": 3.6458067463597894,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "기준",
+          "quality_score": 0.7180871212121213,
+          "cost_ratio": 3.4987724025880342,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.703632005899705,
+          "cost_ratio": 3.8989875299683163,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.7230823139653415,
+          "cost_ratio": 3.329602719807005,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6954326923076923,
+          "cost_ratio": 3.251611685834846,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.7275873655913978,
+          "cost_ratio": 3.7120821642903645,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7678175263449806,
+          "cost_ratio": 3.5092948246760858,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6922993960310586,
+          "cost_ratio": 3.4950573198849098,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6781994047619048,
+          "cost_ratio": 3.528527201054675,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7367013888888881,
+          "cost_ratio": 3.4881850487071593,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6727899774774775,
+          "cost_ratio": 3.494960019468468,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.741045947488583,
+          "cost_ratio": 3.500607473175511,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7630822746521476,
+          "cost_ratio": 3.5151755746103635,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6975806451612886,
+          "cost_ratio": 3.49106275775045,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6901268115942029,
+          "cost_ratio": 3.5054554106824165,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.7279807692307694,
+          "cost_ratio": 3.4964705044286197,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7380235226620768,
+          "cost_ratio": 3.4103999844360837,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.7082626519649389,
+          "cost_ratio": 3.53562375159095,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.744980879541109,
+          "cost_ratio": 3.5184013215520125,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "4회생성오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.7067165184586324,
+          "cost_ratio": 3.49147100189255,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "기준",
+          "quality_score": 0.7180871212121213,
+          "cost_ratio": 3.753961209237279,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "aime-증가",
+          "quality_score": 0.703632005899705,
+          "cost_ratio": 4.194911980419607,
+          "budget_limit": 4.0,
+          "budget_passed": false
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "aime-감소",
+          "quality_score": 0.7230823139653415,
+          "cost_ratio": 3.5675726972106316,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "babilong-증가",
+          "quality_score": 0.6954326923076923,
+          "cost_ratio": 3.48572148414222,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "babilong-감소",
+          "quality_score": 0.7275873655913978,
+          "cost_ratio": 3.9854630133700857,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "belebele-증가",
+          "quality_score": 0.7678175263449806,
+          "cost_ratio": 3.764420823188405,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "belebele-감소",
+          "quality_score": 0.6922993960310586,
+          "cost_ratio": 3.7502683017920084,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "cruxeval-증가",
+          "quality_score": 0.6781994047619048,
+          "cost_ratio": 3.7852671471643906,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "cruxeval-감소",
+          "quality_score": 0.7367013888888881,
+          "cost_ratio": 3.742821928835877,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "deepmind-mathematics-증가",
+          "quality_score": 0.6727899774774775,
+          "cost_ratio": 3.7501092543715755,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "deepmind-mathematics-감소",
+          "quality_score": 0.741045947488583,
+          "cost_ratio": 3.755815327476882,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "gsm8k-증가",
+          "quality_score": 0.7630822746521476,
+          "cost_ratio": 3.7726647206353427,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "gsm8k-감소",
+          "quality_score": 0.6975806451612886,
+          "cost_ratio": 3.745170383298336,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "hrmcr-증가",
+          "quality_score": 0.6901268115942029,
+          "cost_ratio": 3.7608702844677078,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "hrmcr-감소",
+          "quality_score": 0.7279807692307694,
+          "cost_ratio": 3.75158144441707,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "ruletaker-증가",
+          "quality_score": 0.7380235226620768,
+          "cost_ratio": 3.6507957960527837,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "ruletaker-감소",
+          "quality_score": 0.7082626519649389,
+          "cost_ratio": 3.7969812456445062,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "truthfulqa-증가",
+          "quality_score": 0.744980879541109,
+          "cost_ratio": 3.7767025790694264,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        },
+        {
+          "cost_profile": "결합최악오차",
+          "family_profile": "truthfulqa-감소",
+          "quality_score": 0.7067165184586324,
+          "cost_ratio": 3.7455020651645228,
+          "budget_limit": 4.0,
+          "budget_passed": true
+        }
+      ]
+    }
+  },
+  "failures": [
+    {
+      "tier": "premium",
+      "cost_profile": "모델상관오차",
+      "family_profile": "aime-증가",
+      "quality_score": 0.703632005899705,
+      "cost_ratio": 4.026284895120731,
+      "budget_limit": 4.0,
+      "budget_passed": false
+    },
+    {
+      "tier": "premium",
+      "cost_profile": "결합최악오차",
+      "family_profile": "aime-증가",
+      "quality_score": 0.703632005899705,
+      "cost_ratio": 4.194911980419607,
+      "budget_limit": 4.0,
+      "budget_passed": false
+    }
+  ]
+}

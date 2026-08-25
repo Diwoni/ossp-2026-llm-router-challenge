@@ -25,7 +25,7 @@ class FinalRouterAssetsTest(unittest.TestCase):
         self.assertEqual(["ax31-light", "ax31"], gate["fast"]["allowed_model_ids"])
         self.assertLessEqual(gate["fast"]["safety_ratio"], 0.95)
         self.assertLessEqual(gate["balanced"]["safety_ratio"], 0.90)
-        self.assertLessEqual(gate["premium"]["safety_ratio"], 0.84)
+        self.assertLessEqual(gate["premium"]["safety_ratio"], 0.78)
         self.assertEqual(0.75, gate["balanced"]["teacher_student_weight"])
 
     def test_asset_manifest_has_unique_safe_paths_and_exact_total(self) -> None:
