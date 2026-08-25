@@ -1,0 +1,231 @@
+{
+  "artifact_type": "os-skt-qwen-public-all-robustness-v1",
+  "frozen_configuration": {
+    "teacher": {
+      "dimension": 1024,
+      "neighbors": 40,
+      "temperature": 0.1,
+      "prior_strength": 2.0,
+      "target_mode": "direct",
+      "source_bonus": 0.0,
+      "head": "knn",
+      "ridge_alpha": 0.0
+    },
+    "alpha": 10.0,
+    "residual_weight": 0.5,
+    "safety_ratio": 0.9,
+    "mode": "all",
+    "fraction": 1.0,
+    "weight": 0.75
+  },
+  "reports": [
+    {
+      "fold_type": "original-public-all",
+      "seed": 20260825,
+      "fold_count": 3,
+      "group_count": 3,
+      "masked_rows": 2640,
+      "changed_decisions": 204,
+      "baseline": {
+        "quality_score": 0.684469696969697,
+        "actual_budget_ratio": 1.7635746599940514,
+        "predicted_budget_ratio": 1.7959351607518037,
+        "selection_counts": {
+          "ax31-light": 428,
+          "ax31": 2115,
+          "axk1-think": 97
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6870265151515151,
+        "actual_budget_ratio": 1.7408959434168738,
+        "predicted_budget_ratio": 1.7974728210054143,
+        "selection_counts": {
+          "ax31-light": 356,
+          "ax31": 2221,
+          "axk1-think": 63
+        }
+      },
+      "quality_delta": 0.002556818181818188
+    },
+    {
+      "fold_type": "stratified",
+      "seed": 20260825,
+      "fold_count": 5,
+      "group_count": 5,
+      "masked_rows": 2640,
+      "changed_decisions": 213,
+      "baseline": {
+        "quality_score": 0.6860795454545454,
+        "actual_budget_ratio": 1.8137905155047884,
+        "predicted_budget_ratio": 1.7998352374015691,
+        "selection_counts": {
+          "ax31-light": 432,
+          "ax31": 2117,
+          "axk1-think": 91
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6864583333333333,
+        "actual_budget_ratio": 1.7568959701395754,
+        "predicted_budget_ratio": 1.7999982212444265,
+        "selection_counts": {
+          "ax31-light": 358,
+          "ax31": 2218,
+          "axk1-think": 64
+        }
+      },
+      "quality_delta": 0.00037878787878786735
+    },
+    {
+      "fold_type": "content-cluster",
+      "seed": 20260825,
+      "fold_count": 5,
+      "group_count": 40,
+      "masked_rows": 2640,
+      "changed_decisions": 218,
+      "baseline": {
+        "quality_score": 0.6817234848484849,
+        "actual_budget_ratio": 1.7511821154429954,
+        "predicted_budget_ratio": 1.7995035280768104,
+        "selection_counts": {
+          "ax31-light": 406,
+          "ax31": 2149,
+          "axk1-think": 85
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6839962121212121,
+        "actual_budget_ratio": 1.7555135728221345,
+        "predicted_budget_ratio": 1.7999348482509354,
+        "selection_counts": {
+          "ax31-light": 292,
+          "ax31": 2297,
+          "axk1-think": 51
+        }
+      },
+      "quality_delta": 0.002272727272727204
+    },
+    {
+      "fold_type": "stratified",
+      "seed": 20260826,
+      "fold_count": 5,
+      "group_count": 5,
+      "masked_rows": 2640,
+      "changed_decisions": 203,
+      "baseline": {
+        "quality_score": 0.6870265151515151,
+        "actual_budget_ratio": 1.7642111761885477,
+        "predicted_budget_ratio": 1.7992014711059094,
+        "selection_counts": {
+          "ax31-light": 427,
+          "ax31": 2126,
+          "axk1-think": 87
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6872159090909091,
+        "actual_budget_ratio": 1.7538684737117152,
+        "predicted_budget_ratio": 1.7975688783036137,
+        "selection_counts": {
+          "ax31-light": 362,
+          "ax31": 2217,
+          "axk1-think": 61
+        }
+      },
+      "quality_delta": 0.00018939393939398919
+    },
+    {
+      "fold_type": "content-cluster",
+      "seed": 20260826,
+      "fold_count": 5,
+      "group_count": 40,
+      "masked_rows": 2640,
+      "changed_decisions": 222,
+      "baseline": {
+        "quality_score": 0.6838068181818182,
+        "actual_budget_ratio": 1.7845476847743902,
+        "predicted_budget_ratio": 1.79878716194553,
+        "selection_counts": {
+          "ax31-light": 410,
+          "ax31": 2141,
+          "axk1-think": 89
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6860795454545454,
+        "actual_budget_ratio": 1.769288678492322,
+        "predicted_budget_ratio": 1.7999340510721928,
+        "selection_counts": {
+          "ax31-light": 278,
+          "ax31": 2315,
+          "axk1-think": 47
+        }
+      },
+      "quality_delta": 0.002272727272727204
+    },
+    {
+      "fold_type": "stratified",
+      "seed": 20260827,
+      "fold_count": 5,
+      "group_count": 5,
+      "masked_rows": 2640,
+      "changed_decisions": 199,
+      "baseline": {
+        "quality_score": 0.6850378787878788,
+        "actual_budget_ratio": 1.7674304435028947,
+        "predicted_budget_ratio": 1.7996985773809488,
+        "selection_counts": {
+          "ax31-light": 432,
+          "ax31": 2115,
+          "axk1-think": 93
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6866477272727273,
+        "actual_budget_ratio": 1.7505300316960506,
+        "predicted_budget_ratio": 1.796021339895432,
+        "selection_counts": {
+          "ax31-light": 360,
+          "ax31": 2218,
+          "axk1-think": 62
+        }
+      },
+      "quality_delta": 0.001609848484848464
+    },
+    {
+      "fold_type": "content-cluster",
+      "seed": 20260827,
+      "fold_count": 5,
+      "group_count": 40,
+      "masked_rows": 2640,
+      "changed_decisions": 307,
+      "baseline": {
+        "quality_score": 0.680965909090909,
+        "actual_budget_ratio": 1.7964102858836215,
+        "predicted_budget_ratio": 1.7993255987277381,
+        "selection_counts": {
+          "ax31-light": 532,
+          "ax31": 1951,
+          "axk1-think": 157
+        }
+      },
+      "candidate": {
+        "quality_score": 0.6838068181818182,
+        "actual_budget_ratio": 1.7625763278140814,
+        "predicted_budget_ratio": 1.7981093028788306,
+        "selection_counts": {
+          "ax31-light": 365,
+          "ax31": 2202,
+          "axk1-think": 73
+        }
+      },
+      "quality_delta": 0.0028409090909091717
+    }
+  ],
+  "non_negative_count": 7,
+  "positive_count": 7,
+  "fold_spec_count": 7,
+  "passed": true,
+  "deployment_recommendation": "eligible-for-runtime-audit"
+}
