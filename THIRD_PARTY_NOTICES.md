@@ -33,6 +33,20 @@ Qwen 가중치와 Qwen 실행 코드는 제출 이미지에 포함되지 않습�
 기존 E5 임베딩과 내용 기반 피처로 Qwen 교사의 라우팅 신호를 모방하는 약 22KB의
 Ridge 계수만 포함됩니다. 따라서 평가 중 네트워크 호출이나 Qwen 추론은 없습니다.
 
+최종 ARM64 실행 이미지의 Python 패키지는 다음 버전으로 고정합니다.
+
+| 패키지 | 버전 | 라이선스 |
+| --- | ---: | --- |
+| NumPy | 2.5.2 | BSD-3-Clause |
+| ONNX Runtime | 1.28.0 | MIT |
+| Hugging Face tokenizers | 0.22.2 | Apache-2.0 |
+| FlatBuffers | 25.12.19 | Apache-2.0 |
+| packaging | 26.3 | Apache-2.0 OR BSD-2-Clause |
+| protobuf | 7.35.1 | BSD-3-Clause |
+
+전체 Debian·Python·모델 구성은 SPDX 2.3 형식의
+[`method4-sbom.spdx.json`](reports/method4-sbom.spdx.json)에 기록합니다.
+
 This notice applies to the adapted public prompts in
 `data/train/inputs-base.json` and `data/dev/inputs-base.json`. Those files are
 collections. Each source-derived part retains the license below; the project

@@ -33,6 +33,21 @@ Python 저작권·라이선스와 APK 패키지 메타데이터의 고지 조건
 v1 JSON 형식이나 평가 정책 ID를 바꾸지 않지만 제출 이미지 다이제스트는
 새로 기록해야 합니다.
 
+## 참가팀 최종 Method 4 이미지
+
+최종 라우터는 ARM64 ONNX Runtime wheel 호환성을 위해 Docker Official Image
+`python:3.12.11-slim-bookworm`을 사용합니다.
+
+- 다중 플랫폼 인덱스 다이제스트:
+  `sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7`
+- 공식 선택 플랫폼: `linux/arm64`
+- Python: PSF License 2.0
+- Debian Bookworm 패키지: 이미지 SBOM에 개별 패키지와 버전 기록
+
+제출 이미지는 `FROM`에 태그와 전체 다이제스트를 함께 적어 다른 기반 이미지로
+바뀌지 않게 했습니다. 최종 병합 rootfs와 압축 계층 크기는
+[`CONTAINER_VERIFICATION_KO.md`](../docs/CONTAINER_VERIFICATION_KO.md)에 기록합니다.
+
 공식 실행기가 제한 출력 볼륨에서 결과를 꺼낼 때만 사용하는 운영자 도우미는
 별도의 Docker Official Image
 `python:3.14.6-alpine3.23@sha256:b165067c5afc37fa5608a3c05609cc3d51aafd808a30fbfd822ee594fef55ad4`로
