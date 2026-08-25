@@ -29,7 +29,7 @@
   },
   "premium": {
     "router": "similarity-hash",
-    "safety_ratio": 0.84,
+    "safety_ratio": 0.78,
     "decision_round_decimals": 4,
     "similarity_neighbors": 20,
     "similarity_temperature": 0.15,
@@ -39,4 +39,3 @@
     "allowed_model_ids": ["ax31-light", "ax31", "axk1-think"]
   }
 }
-

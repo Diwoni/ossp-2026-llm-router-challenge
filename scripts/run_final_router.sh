@@ -12,6 +12,7 @@ fi
 ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$ROOT_DIR"
 ASSETS=${METHOD4_FINAL_ASSETS:-build/reproduced-assets/qwen-student}
+GATE=${METHOD4_FINAL_GATE:-configs/method4-tier-gate.qwen-student.json}
 
 PYTHONPATH=src:. .venv/bin/python -m \
   experiments.method4_finetuned_encoder.final_route \
@@ -25,5 +26,5 @@ PYTHONPATH=src:. .venv/bin/python -m \
   --residual-artifact "$ASSETS/residual-head.json" \
   --similarity-artifact "$ASSETS/similarity-head.npz" \
   --teacher-student-artifact "$ASSETS/teacher-student-head.json" \
-  --tier-gate configs/method4-tier-gate.qwen-student.json \
+  --tier-gate "$GATE" \
   --threads 2
