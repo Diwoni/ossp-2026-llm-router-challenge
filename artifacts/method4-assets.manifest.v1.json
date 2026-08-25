@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "artifact_type": "os-skt-method4-final-assets-v1",
+  "release_tag": "method4-assets-v1",
+  "total_size": 636519519,
+  "runtime_contains_qwen": false,
+  "external_training_data_used": false,
+  "files": [
+    {
+      "path": "embedding-onnx/embedding-fp32.onnx",
+      "size": 470248414,
+      "sha256": "7f39d48485271d4a52f3731d16644bf1b8e4e36456d12722264fe5963fc071a5",
+      "purpose": "80토큰 동결 E5 Premium 의미 임베딩"
+    },
+    {
+      "path": "embedding-onnx/metadata.json",
+      "size": 273,
+      "sha256": "1046607277dd3668be8e2dff5337137859ad7f852b48a8660948ff81c23b634e",
+      "purpose": "동결 E5 변환 설정"
+    },
+    {
+      "path": "embedding-onnx/tokenizer.json",
+      "size": 17082730,
+      "sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+      "purpose": "동결 E5 토크나이저"
+    },
+    {
+      "path": "onnx/metadata.json",
+      "size": 2665,
+      "sha256": "f1e8b953798bd53f7c664338a3e934cbf5c246e0d0fde0f30b03e98549599dd9",
+      "purpose": "파인튜닝 E5 학습·변환 설정"
+    },
+    {
+      "path": "onnx/router-int8.onnx",
+      "size": 118428041,
+      "sha256": "e86af4846744df7a17cd9d9dced05c4d52735f5876ae3a8d57560da582970774",
+      "purpose": "Fast·Balanced 파인튜닝 E5 라우터"
+    },
+    {
+      "path": "onnx/tokenizer.json",
+      "size": 17082735,
+      "sha256": "6040ba36e3e2f7b2fa6ae076b69d024a08666bea4c345105a32e542900fcc7e7",
+      "purpose": "파인튜닝 E5 토크나이저"
+    },
+    {
+      "path": "residual-head.json",
+      "size": 8387839,
+      "sha256": "4bb1b9ea3f77f47a2b44938e6fc0336586e333dcbca24e7208cc20fbd723f63d",
+      "purpose": "품질 잔차와 비용 예측 head"
+    },
+    {
+      "path": "similarity-head.npz",
+      "size": 5254935,
+      "sha256": "0328a6d37a50671207f42a61e0a7646b7fcbfb734cd2d9734f4bdeb0127e74c1",
+      "purpose": "공개 문제 의미 검색 기준 벡터"
+    },
+    {
+      "path": "stacking-head.json",
+      "size": 8993,
+      "sha256": "0d481483ed12bc46617dbb9dc8a1add53978e56730e413e6fe515abf06e0e713",
+      "purpose": "비교·호환용 선형 stacking head"
+    },
+    {
+      "path": "teacher-student-head.json",
+      "size": 22894,
+      "sha256": "cb7557ef59c4c793ed29a35425ce108b304a5ba7a87a0130f13f7c3b2c036a6b",
+      "purpose": "Qwen 오프라인 교사를 모방한 E5 학생 계수"
+    }
+  ],
+  "source_models": [
+    {
+      "name": "intfloat/multilingual-e5-small",
+      "revision": "d1d99a1efae6779390caba937d92c54b5bc70e51",
+      "weight_sha256": "1a55775f53449dac10a2bcbc312469fac40b96d53198c407081a831f81c98477",
+      "license": "MIT",
+      "runtime_included": true
+    },
+    {
+      "name": "Qwen/Qwen3-Embedding-0.6B",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "weight_sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd",
+      "license": "Apache-2.0",
+      "runtime_included": false
+    }
+  ]
+}
