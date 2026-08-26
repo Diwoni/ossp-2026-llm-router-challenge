@@ -12,12 +12,25 @@ SPDX-License-Identifier: Apache-2.0
 세 등급 모두 통과했다. 등급별 2회 실행의 출력 SHA-256이 같고, 전체 입력을
 뒤집어도 episode별 모델 선택 불일치가 0개였다.
 
+최종 이미지는 이 후보와 같은 16개 rootfs 계층으로 다시 빌드했으며, 소스
+커밋과 OCI 라벨만 최종값으로 고정했다. GHCR 업로드 뒤 확인한 변경 불가능한
+manifest digest는
+`sha256:1913d548e33fe9fcad60eac4e33c73142c73e0b3b1754061080c941154b63829`다.
+심사에는 태그가 아니라 아래 전체 digest 참조를 사용한다.
+
+```text
+ghcr.io/diwoni/ossp-2026-llm-router-challenge@sha256:1913d548e33fe9fcad60eac4e33c73142c73e0b3b1754061080c941154b63829
+```
+
 ## 이미지 구성
 
 | 항목 | 값 |
 | --- | --- |
 | 후보 소스 커밋 | `7dfd0044282f966171c23338d0357e43632c9750` |
 | 후보 로컬 이미지 ID | `sha256:4ffb3ec740da60d4810e907e0a0ddcf07a5b673e64fbc13f06475a14bc074948` |
+| 최종 소스 커밋 | `ca829e1f7d8277a4dcc7e8434607e18c3dd4b068` |
+| 최종 원격 manifest digest | `sha256:1913d548e33fe9fcad60eac4e33c73142c73e0b3b1754061080c941154b63829` |
+| 후보와 최종 이미지 rootfs | 16개 계층 모두 동일 |
 | 플랫폼 | linux/arm64 |
 | 사용자 | `65532:65532` |
 | Docker reported 크기 | 468,590,643바이트 |
@@ -29,6 +42,11 @@ SPDX-License-Identifier: Apache-2.0
 
 공식 한도는 OCI 압축 계층 1GiB, 병합 rootfs 2GiB다. 두 값 모두 충분한 여유가
 있다. 이미지에는 PyTorch, transformers, scikit-learn, scipy가 없다.
+
+기계 판독 가능한 이미지 메타데이터는
+[`method4-image.v1.json`](../artifacts/method4-image.v1.json)에 기록했다. 최종
+제출 직전에는 패키지를 공개로 전환한 뒤, 인증 정보가 없는 새 Docker 설정으로
+위 digest를 pull하여 익명 접근까지 확인한다.
 
 ## 공식 자원 제한 반복 결과
 
