@@ -47,14 +47,14 @@ SPDX-License-Identifier: Apache-2.0
 
 | 필요한 독자 | 문서 |
 | --- | --- |
-| 처음 보는 심사자·개발자 | 루트 [`README.md`](../README.md)의 60초 요약과 쉬운 용어 설명 |
+| 처음 보는 심사자·개발자 | 루트 [`README.md`](../README.md)의 60초 요약과 아키텍처 |
 | 모델 개발자 | [`FINAL_ROUTER_KO.md`](FINAL_ROUTER_KO.md)의 학습 인자·특징·등급별 혼합 |
 | 실험 재현자 | [`FINAL_EXPERIMENT_REPORT_KO.md`](FINAL_EXPERIMENT_REPORT_KO.md)의 원본 JSON·명령·기각 근거 |
 | 운영자 | [`CONTAINER_VERIFICATION_KO.md`](CONTAINER_VERIFICATION_KO.md)의 자원·결정성·digest |
-| 제출 담당자 | [`SUBMISSION_CHECKLIST_KO.md`](SUBMISSION_CHECKLIST_KO.md)와 [`DEMO_VIDEO_KO.md`](DEMO_VIDEO_KO.md) |
+| 제출·운영 담당자 | [`SUBMISSION.md`](SUBMISSION.md)와 [`CONTAINER_VERIFICATION_KO.md`](CONTAINER_VERIFICATION_KO.md) |
 
-점수는 `홀드아웃`, `OOF`, `공개 재대입`, `스트레스`로 이름을 나눠 과대 해석을
-막았다. 어려운 용어에는 일상적인 설명을 함께 적었다.
+점수는 `홀드아웃`, `OOF`, `공개 재대입`, `스트레스`로 구분해 평가 목적과 한계를
+명확히 기록했다.
 
 ## 프로젝트 혁신성 — 6점
 
@@ -77,13 +77,12 @@ SPDX-License-Identifier: Apache-2.0
 | 단계적 검토 | 각 단계가 별도 `codex/issue-*` 브랜치와 PR #9~#15로 병합 |
 | 논리적 커밋 | 기능·검증·문서를 나눈 한국어 커밋 메시지와 이슈 번호 |
 | 의사결정 | PR에 가설, 실행 명령, 전후 수치, 채택·기각 이유 기록 |
-| 외부 아이디어 | 경쟁 포크 링크와 배운 원칙을 기록하고 독립 실험 뒤 반영 여부 결정 |
+| 실험 검증 | 대조군·여러 분할·비용 스트레스를 통과한 변경만 최종 경로에 반영 |
 
 GitHub 기록:
 
 - [이슈 목록](https://github.com/Diwoni/ossp-2026-llm-router-challenge/issues)
 - [PR 목록](https://github.com/Diwoni/ossp-2026-llm-router-challenge/pulls?q=is%3Apr)
-- [프로젝트 계획](PROJECT_PLAN_KO.md)
 - [실험 규약](EXPERIMENT_PROTOCOL_KO.md)
 
 ## 서면평가에서 먼저 보여 줄 세 장면

@@ -34,7 +34,7 @@ SPDX-License-Identifier: Apache-2.0
 ghcr.io/diwoni/ossp-2026-llm-router-challenge@sha256:1913d548e33fe9fcad60eac4e33c73142c73e0b3b1754061080c941154b63829
 ```
 
-## 과제를 쉽게 설명하면
+## 과제 개요
 
 운영자는 각 질문에 세 모델이 과거에 얼마나 잘 답했고 토큰을 얼마나 썼는지 공개
 Train·Dev 자료로 제공합니다. 우리는 그 자료를 이용해 새 질문이 들어왔을 때
@@ -130,10 +130,6 @@ E5가 놓치는 길이·코드·수식 신호는 20개 내용 특징과 작은 �
 | Premium 안전 0.84 | 기각 | 228개 스트레스 중 4개 예산 실패 |
 | Premium 안전 0.78 | 채택 | 228개 모두 통과, 최악 비용비 3.973534 |
 
-경쟁 포크의 구현을 그대로 복사하지 않았습니다. yhl124의 양방향·다중 분할·비용
-스트레스 원칙과 U-S-jun/hwkim3330의 앙상블 아이디어를 각각 독립 실험하고, 현재
-파이프라인에서 검증을 통과한 원칙만 반영했습니다.
-
 ## 빠른 재현
 
 ### 1. 자산 내려받기와 이중 해시 검증
@@ -173,8 +169,6 @@ PYTHONPATH=src:. python3 tools/check_runtime.py \
   --report build/method4-runtime-check.json
 ```
 
-시연 영상은 [3분 시연 대본](docs/DEMO_VIDEO_KO.md)의 명령을 그대로 사용합니다.
-
 ## 저장소 안내
 
 | 경로 | 역할 |
@@ -185,7 +179,7 @@ PYTHONPATH=src:. python3 tools/check_runtime.py \
 | `container/method4.Dockerfile` | 최소 ARM64 CPU 제출 이미지 |
 | `artifacts/` | 모델 파일 manifest, Release와 이미지 digest 메타데이터 |
 | `reports/` | 채택·기각·비용·실행·SBOM 원본 JSON |
-| `scripts/` | 학습·평가·자산 검증·시연 자동화 |
+| `scripts/` | 학습·평가·자산 검증·실행 자동화 |
 | `tests/` | 프로토콜·점수·누수·결정성·비용·런타임 테스트 |
 | `docs/` | 공식 규칙과 한글 설계·실험·제출 문서 |
 
@@ -195,9 +189,8 @@ PYTHONPATH=src:. python3 tools/check_runtime.py \
 - [최종 라우터와 파인튜닝](docs/FINAL_ROUTER_KO.md)
 - [비용 강건성 228개](docs/COST_ROBUSTNESS_KO.md)
 - [ARM64 컨테이너 검증](docs/CONTAINER_VERIFICATION_KO.md)
-- [후보 실험과 경쟁 포크 검증](docs/CANDIDATE_EXPERIMENTS_KO.md)
+- [대안 모델 비교와 채택 근거](docs/CANDIDATE_EXPERIMENTS_KO.md)
 - [기준선 재현](docs/BASELINE_REPRODUCTION_KO.md)
-- [제출 직전 체크리스트](docs/SUBMISSION_CHECKLIST_KO.md)
 - [서면평가 30점 근거표](docs/JUDGING_EVIDENCE_KO.md)
 
 전체 단위 테스트는 다음 명령으로 실행하며 현재 280개 통과, Docker가 필요한
