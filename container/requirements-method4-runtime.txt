@@ -1,0 +1,7 @@
+# 최종 이미지에는 학습용 PyTorch·transformers·scikit-learn·scipy를 넣지 않습니다.
+numpy==2.5.2
+onnxruntime==1.28.0
+tokenizers==0.22.2
+flatbuffers==25.12.19
+packaging==26.3
+protobuf==7.35.1

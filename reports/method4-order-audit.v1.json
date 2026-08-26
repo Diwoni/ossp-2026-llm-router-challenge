@@ -1,0 +1,36 @@
+{
+  "artifact_type": "os-skt-method4-order-audit-v1",
+  "passed": true,
+  "tiers": {
+    "fast": {
+      "episodes": 2640,
+      "missing_count": 0,
+      "extra_count": 0,
+      "mismatched_count": 0,
+      "passed": true,
+      "missing_sample": [],
+      "extra_sample": [],
+      "mismatched_sample": []
+    },
+    "balanced": {
+      "episodes": 2640,
+      "missing_count": 0,
+      "extra_count": 0,
+      "mismatched_count": 0,
+      "passed": true,
+      "missing_sample": [],
+      "extra_sample": [],
+      "mismatched_sample": []
+    },
+    "premium": {
+      "episodes": 2640,
+      "missing_count": 0,
+      "extra_count": 0,
+      "mismatched_count": 0,
+      "passed": true,
+      "missing_sample": [],
+      "extra_sample": [],
+      "mismatched_sample": []
+    }
+  }
+}

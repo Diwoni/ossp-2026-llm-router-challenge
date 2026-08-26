@@ -13,6 +13,7 @@ from experiments.analysis.audit_final_cost_robustness import (
     select_models_weighted,
 )
 from experiments.analysis.build_public_runtime_input import build_public_input
+from experiments.analysis.compare_submission_order import compare_decisions
 
 
 class FinalCostRobustnessTest(unittest.TestCase):
@@ -53,6 +54,16 @@ class FinalCostRobustnessTest(unittest.TestCase):
             ("ax31-light", "ax31"),
         )
         self.assertEqual(("ax31-light", "ax31"), selected)
+
+    def test_order_comparison_ignores_json_array_order(self) -> None:
+        reference = {
+            "decisions": [
+                {"episode_id": "a", "model_id": "ax31"},
+                {"episode_id": "b", "model_id": "ax31-light"},
+            ]
+        }
+        candidate = {"decisions": list(reversed(reference["decisions"]))}
+        self.assertTrue(compare_decisions(reference, candidate)["passed"])
 
 
 if __name__ == "__main__":

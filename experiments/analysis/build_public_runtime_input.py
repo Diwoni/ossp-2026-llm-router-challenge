@@ -35,10 +35,18 @@ def build_public_input(train: dict, dev: dict) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--reverse",
+        action="store_true",
+        help="ID·순서 독립성 감사를 위해 전체 문항 순서를 뒤집습니다",
+    )
     args = parser.parse_args()
     train = load_json(choose_existing_input(ROOT, "train"))
     dev = load_json(choose_existing_input(ROOT, "dev"))
     result = build_public_input(train, dev)
+    if args.reverse:
+        result["episodes"] = list(reversed(result["episodes"]))
+        result["split"] = "public-train-dev-reversed"
     write_json_atomic(args.output, result)
     print(f"공개 실행 입력 {len(result['episodes'])}문항을 기록했습니다: {args.output}")
     return 0

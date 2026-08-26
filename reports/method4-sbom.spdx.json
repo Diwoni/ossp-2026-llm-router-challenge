@@ -1,0 +1,2555 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "Diwoni OSSP 2026 Method 4 이미지 SBOM",
+  "documentNamespace": "https://github.com/Diwoni/ossp-2026-llm-router-challenge/sbom/4ffb3ec740da60d4810e907e0a0ddcf07a5b673e64fbc13f06475a14bc074948",
+  "creationInfo": {
+    "created": "2026-08-25T18:53:52.571870Z",
+    "creators": [
+      "Tool: tools/generate_method4_sbom.py"
+    ],
+    "licenseListVersion": "3.27"
+  },
+  "documentDescribes": [
+    "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router"
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "name": "Diwoni OSSP 2026 LLM Router",
+      "versionInfo": "7dfd0044282f966171c23338d0357e43632c9750",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Diwoni/ossp-2026-llm-router-challenge@7dfd0044282f966171c23338d0357e43632c9750"
+        }
+      ],
+      "comment": "linux/arm64 이미지 sha256:4ffb3ec740da60d4810e907e0a0ddcf07a5b673e64fbc13f06475a14bc074948"
+    },
+    {
+      "SPDXID": "SPDXRef-BaseImage-python-slim-bookworm",
+      "name": "python-slim-bookworm",
+      "versionInfo": "3.12.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Python-2.0 AND NOASSERTION",
+      "licenseDeclared": "Python-2.0 AND NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:docker/python@3.12.11-slim-bookworm"
+        }
+      ],
+      "comment": "기반 이미지 다이제스트 sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7"
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-adduser",
+      "name": "adduser",
+      "versionInfo": "3.134",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/adduser@3.134"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-apt",
+      "name": "apt",
+      "versionInfo": "2.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/apt@2.6.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-base-files",
+      "name": "base-files",
+      "versionInfo": "12.4+deb12u12",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/base-files@12.4+deb12u12"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-base-passwd",
+      "name": "base-passwd",
+      "versionInfo": "3.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/base-passwd@3.6.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-bash",
+      "name": "bash",
+      "versionInfo": "5.2.15-2+b9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/bash@5.2.15-2+b9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-bsdutils",
+      "name": "bsdutils",
+      "versionInfo": "1:2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/bsdutils@1:2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-ca-certificates",
+      "name": "ca-certificates",
+      "versionInfo": "20230311+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/ca-certificates@20230311+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-coreutils",
+      "name": "coreutils",
+      "versionInfo": "9.1-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/coreutils@9.1-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-dash",
+      "name": "dash",
+      "versionInfo": "0.5.12-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/dash@0.5.12-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-debconf",
+      "name": "debconf",
+      "versionInfo": "1.5.82",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/debconf@1.5.82"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-debian-archive-keyring",
+      "name": "debian-archive-keyring",
+      "versionInfo": "2023.3+deb12u2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/debian-archive-keyring@2023.3+deb12u2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-debianutils",
+      "name": "debianutils",
+      "versionInfo": "5.7-0.5~deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/debianutils@5.7-0.5~deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-diffutils",
+      "name": "diffutils",
+      "versionInfo": "1:3.8-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/diffutils@1:3.8-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-dpkg",
+      "name": "dpkg",
+      "versionInfo": "1.21.22",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/dpkg@1.21.22"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-e2fsprogs",
+      "name": "e2fsprogs",
+      "versionInfo": "1.47.0-2+b2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/e2fsprogs@1.47.0-2+b2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-findutils",
+      "name": "findutils",
+      "versionInfo": "4.9.0-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/findutils@4.9.0-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-gcc-12-base-arm64",
+      "name": "gcc-12-base:arm64",
+      "versionInfo": "12.2.0-14+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/gcc-12-base:arm64@12.2.0-14+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-gpgv",
+      "name": "gpgv",
+      "versionInfo": "2.2.40-1.1+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/gpgv@2.2.40-1.1+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-grep",
+      "name": "grep",
+      "versionInfo": "3.8-5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/grep@3.8-5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-gzip",
+      "name": "gzip",
+      "versionInfo": "1.12-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/gzip@1.12-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-hostname",
+      "name": "hostname",
+      "versionInfo": "3.23+nmu1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/hostname@3.23+nmu1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-init-system-helpers",
+      "name": "init-system-helpers",
+      "versionInfo": "1.65.2+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/init-system-helpers@1.65.2+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libacl1-arm64",
+      "name": "libacl1:arm64",
+      "versionInfo": "2.3.1-3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libacl1:arm64@2.3.1-3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libapt-pkg6.0-arm64",
+      "name": "libapt-pkg6.0:arm64",
+      "versionInfo": "2.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libapt-pkg6.0:arm64@2.6.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libattr1-arm64",
+      "name": "libattr1:arm64",
+      "versionInfo": "1:2.5.1-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libattr1:arm64@1:2.5.1-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libaudit-common",
+      "name": "libaudit-common",
+      "versionInfo": "1:3.0.9-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libaudit-common@1:3.0.9-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libaudit1-arm64",
+      "name": "libaudit1:arm64",
+      "versionInfo": "1:3.0.9-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libaudit1:arm64@1:3.0.9-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libblkid1-arm64",
+      "name": "libblkid1:arm64",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libblkid1:arm64@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libbz2-1.0-arm64",
+      "name": "libbz2-1.0:arm64",
+      "versionInfo": "1.0.8-5+b1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libbz2-1.0:arm64@1.0.8-5+b1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libc-bin",
+      "name": "libc-bin",
+      "versionInfo": "2.36-9+deb12u13",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libc-bin@2.36-9+deb12u13"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libc6-arm64",
+      "name": "libc6:arm64",
+      "versionInfo": "2.36-9+deb12u13",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libc6:arm64@2.36-9+deb12u13"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libcap-ng0-arm64",
+      "name": "libcap-ng0:arm64",
+      "versionInfo": "0.8.3-1+b3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libcap-ng0:arm64@0.8.3-1+b3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libcap2-arm64",
+      "name": "libcap2:arm64",
+      "versionInfo": "1:2.66-4+deb12u2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libcap2:arm64@1:2.66-4+deb12u2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libcom-err2-arm64",
+      "name": "libcom-err2:arm64",
+      "versionInfo": "1.47.0-2+b2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libcom-err2:arm64@1.47.0-2+b2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libcrypt1-arm64",
+      "name": "libcrypt1:arm64",
+      "versionInfo": "1:4.4.33-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libcrypt1:arm64@1:4.4.33-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libdb5.3-arm64",
+      "name": "libdb5.3:arm64",
+      "versionInfo": "5.3.28+dfsg2-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libdb5.3:arm64@5.3.28+dfsg2-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libdebconfclient0-arm64",
+      "name": "libdebconfclient0:arm64",
+      "versionInfo": "0.270",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libdebconfclient0:arm64@0.270"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libext2fs2-arm64",
+      "name": "libext2fs2:arm64",
+      "versionInfo": "1.47.0-2+b2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libext2fs2:arm64@1.47.0-2+b2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libffi8-arm64",
+      "name": "libffi8:arm64",
+      "versionInfo": "3.4.4-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libffi8:arm64@3.4.4-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgcc-s1-arm64",
+      "name": "libgcc-s1:arm64",
+      "versionInfo": "12.2.0-14+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgcc-s1:arm64@12.2.0-14+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgcrypt20-arm64",
+      "name": "libgcrypt20:arm64",
+      "versionInfo": "1.10.1-3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgcrypt20:arm64@1.10.1-3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgdbm6-arm64",
+      "name": "libgdbm6:arm64",
+      "versionInfo": "1.23-3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgdbm6:arm64@1.23-3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgmp10-arm64",
+      "name": "libgmp10:arm64",
+      "versionInfo": "2:6.2.1+dfsg1-1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgmp10:arm64@2:6.2.1+dfsg1-1.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgnutls30-arm64",
+      "name": "libgnutls30:arm64",
+      "versionInfo": "3.7.9-2+deb12u5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgnutls30:arm64@3.7.9-2+deb12u5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgpg-error0-arm64",
+      "name": "libgpg-error0:arm64",
+      "versionInfo": "1.46-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgpg-error0:arm64@1.46-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libgssapi-krb5-2-arm64",
+      "name": "libgssapi-krb5-2:arm64",
+      "versionInfo": "1.20.1-2+deb12u4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libgssapi-krb5-2:arm64@1.20.1-2+deb12u4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libhogweed6-arm64",
+      "name": "libhogweed6:arm64",
+      "versionInfo": "3.8.1-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libhogweed6:arm64@3.8.1-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libidn2-0-arm64",
+      "name": "libidn2-0:arm64",
+      "versionInfo": "2.3.3-1+b1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libidn2-0:arm64@2.3.3-1+b1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libk5crypto3-arm64",
+      "name": "libk5crypto3:arm64",
+      "versionInfo": "1.20.1-2+deb12u4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libk5crypto3:arm64@1.20.1-2+deb12u4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libkeyutils1-arm64",
+      "name": "libkeyutils1:arm64",
+      "versionInfo": "1.6.3-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libkeyutils1:arm64@1.6.3-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libkrb5-3-arm64",
+      "name": "libkrb5-3:arm64",
+      "versionInfo": "1.20.1-2+deb12u4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libkrb5-3:arm64@1.20.1-2+deb12u4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libkrb5support0-arm64",
+      "name": "libkrb5support0:arm64",
+      "versionInfo": "1.20.1-2+deb12u4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libkrb5support0:arm64@1.20.1-2+deb12u4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-liblz4-1-arm64",
+      "name": "liblz4-1:arm64",
+      "versionInfo": "1.9.4-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/liblz4-1:arm64@1.9.4-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-liblzma5-arm64",
+      "name": "liblzma5:arm64",
+      "versionInfo": "5.4.1-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/liblzma5:arm64@5.4.1-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libmd0-arm64",
+      "name": "libmd0:arm64",
+      "versionInfo": "1.0.4-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libmd0:arm64@1.0.4-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libmount1-arm64",
+      "name": "libmount1:arm64",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libmount1:arm64@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libncursesw6-arm64",
+      "name": "libncursesw6:arm64",
+      "versionInfo": "6.4-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libncursesw6:arm64@6.4-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libnettle8-arm64",
+      "name": "libnettle8:arm64",
+      "versionInfo": "3.8.1-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libnettle8:arm64@3.8.1-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libnsl2-arm64",
+      "name": "libnsl2:arm64",
+      "versionInfo": "1.3.0-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libnsl2:arm64@1.3.0-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libp11-kit0-arm64",
+      "name": "libp11-kit0:arm64",
+      "versionInfo": "0.24.1-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libp11-kit0:arm64@0.24.1-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libpam-modules-arm64",
+      "name": "libpam-modules:arm64",
+      "versionInfo": "1.5.2-6+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libpam-modules:arm64@1.5.2-6+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libpam-modules-bin",
+      "name": "libpam-modules-bin",
+      "versionInfo": "1.5.2-6+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libpam-modules-bin@1.5.2-6+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libpam-runtime",
+      "name": "libpam-runtime",
+      "versionInfo": "1.5.2-6+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libpam-runtime@1.5.2-6+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libpam0g-arm64",
+      "name": "libpam0g:arm64",
+      "versionInfo": "1.5.2-6+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libpam0g:arm64@1.5.2-6+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libpcre2-8-0-arm64",
+      "name": "libpcre2-8-0:arm64",
+      "versionInfo": "10.42-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libpcre2-8-0:arm64@10.42-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libreadline8-arm64",
+      "name": "libreadline8:arm64",
+      "versionInfo": "8.2-1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libreadline8:arm64@8.2-1.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libseccomp2-arm64",
+      "name": "libseccomp2:arm64",
+      "versionInfo": "2.5.4-1+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libseccomp2:arm64@2.5.4-1+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libselinux1-arm64",
+      "name": "libselinux1:arm64",
+      "versionInfo": "3.4-1+b6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libselinux1:arm64@3.4-1+b6"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libsemanage-common",
+      "name": "libsemanage-common",
+      "versionInfo": "3.4-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libsemanage-common@3.4-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libsemanage2-arm64",
+      "name": "libsemanage2:arm64",
+      "versionInfo": "3.4-1+b5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libsemanage2:arm64@3.4-1+b5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libsepol2-arm64",
+      "name": "libsepol2:arm64",
+      "versionInfo": "3.4-2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libsepol2:arm64@3.4-2.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libsmartcols1-arm64",
+      "name": "libsmartcols1:arm64",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libsmartcols1:arm64@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libsqlite3-0-arm64",
+      "name": "libsqlite3-0:arm64",
+      "versionInfo": "3.40.1-2+deb12u2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libsqlite3-0:arm64@3.40.1-2+deb12u2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libss2-arm64",
+      "name": "libss2:arm64",
+      "versionInfo": "1.47.0-2+b2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libss2:arm64@1.47.0-2+b2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libssl3-arm64",
+      "name": "libssl3:arm64",
+      "versionInfo": "3.0.17-1~deb12u2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libssl3:arm64@3.0.17-1~deb12u2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libstdc-6-arm64",
+      "name": "libstdc++6:arm64",
+      "versionInfo": "12.2.0-14+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libstdc++6:arm64@12.2.0-14+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libsystemd0-arm64",
+      "name": "libsystemd0:arm64",
+      "versionInfo": "252.39-1~deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libsystemd0:arm64@252.39-1~deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libtasn1-6-arm64",
+      "name": "libtasn1-6:arm64",
+      "versionInfo": "4.19.0-2+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libtasn1-6:arm64@4.19.0-2+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libtinfo6-arm64",
+      "name": "libtinfo6:arm64",
+      "versionInfo": "6.4-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libtinfo6:arm64@6.4-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libtirpc-common",
+      "name": "libtirpc-common",
+      "versionInfo": "1.3.3+ds-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libtirpc-common@1.3.3+ds-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libtirpc3-arm64",
+      "name": "libtirpc3:arm64",
+      "versionInfo": "1.3.3+ds-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libtirpc3:arm64@1.3.3+ds-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libudev1-arm64",
+      "name": "libudev1:arm64",
+      "versionInfo": "252.39-1~deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libudev1:arm64@252.39-1~deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libunistring2-arm64",
+      "name": "libunistring2:arm64",
+      "versionInfo": "1.0-2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libunistring2:arm64@1.0-2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libuuid1-arm64",
+      "name": "libuuid1:arm64",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libuuid1:arm64@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libxxhash0-arm64",
+      "name": "libxxhash0:arm64",
+      "versionInfo": "0.8.1-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libxxhash0:arm64@0.8.1-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-libzstd1-arm64",
+      "name": "libzstd1:arm64",
+      "versionInfo": "1.5.4+dfsg2-5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/libzstd1:arm64@1.5.4+dfsg2-5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-login",
+      "name": "login",
+      "versionInfo": "1:4.13+dfsg1-1+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/login@1:4.13+dfsg1-1+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-logsave",
+      "name": "logsave",
+      "versionInfo": "1.47.0-2+b2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/logsave@1.47.0-2+b2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-mawk",
+      "name": "mawk",
+      "versionInfo": "1.3.4.20200120-3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/mawk@1.3.4.20200120-3.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-mount",
+      "name": "mount",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/mount@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-ncurses-base",
+      "name": "ncurses-base",
+      "versionInfo": "6.4-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/ncurses-base@6.4-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-ncurses-bin",
+      "name": "ncurses-bin",
+      "versionInfo": "6.4-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/ncurses-bin@6.4-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-netbase",
+      "name": "netbase",
+      "versionInfo": "6.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/netbase@6.4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-openssl",
+      "name": "openssl",
+      "versionInfo": "3.0.17-1~deb12u2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/openssl@3.0.17-1~deb12u2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-passwd",
+      "name": "passwd",
+      "versionInfo": "1:4.13+dfsg1-1+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/passwd@1:4.13+dfsg1-1+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-perl-base",
+      "name": "perl-base",
+      "versionInfo": "5.36.0-7+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/perl-base@5.36.0-7+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-readline-common",
+      "name": "readline-common",
+      "versionInfo": "8.2-1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/readline-common@8.2-1.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-sed",
+      "name": "sed",
+      "versionInfo": "4.9-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/sed@4.9-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-sysvinit-utils",
+      "name": "sysvinit-utils",
+      "versionInfo": "3.06-4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/sysvinit-utils@3.06-4"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-tar",
+      "name": "tar",
+      "versionInfo": "1.34+dfsg-1.2+deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/tar@1.34+dfsg-1.2+deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-tzdata",
+      "name": "tzdata",
+      "versionInfo": "2025b-0+deb12u2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/tzdata@2025b-0+deb12u2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-usr-is-merged",
+      "name": "usr-is-merged",
+      "versionInfo": "37~deb12u1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/usr-is-merged@37~deb12u1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-util-linux",
+      "name": "util-linux",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/util-linux@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-util-linux-extra",
+      "name": "util-linux-extra",
+      "versionInfo": "2.38.1-5+deb12u3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/util-linux-extra@2.38.1-5+deb12u3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Debian-zlib1g-arm64",
+      "name": "zlib1g:arm64",
+      "versionInfo": "1:1.2.13.dfsg-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/zlib1g:arm64@1:1.2.13.dfsg-1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Python-flatbuffers",
+      "name": "flatbuffers",
+      "versionInfo": "25.12.19",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/flatbuffers@25.12.19"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Python-numpy",
+      "name": "numpy",
+      "versionInfo": "2.5.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/numpy@2.5.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Python-onnxruntime",
+      "name": "onnxruntime",
+      "versionInfo": "1.28.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/onnxruntime@1.28.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Python-packaging",
+      "name": "packaging",
+      "versionInfo": "26.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 OR BSD-2-Clause",
+      "licenseDeclared": "Apache-2.0 OR BSD-2-Clause",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/packaging@26.3"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Python-protobuf",
+      "name": "protobuf",
+      "versionInfo": "7.35.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/protobuf@7.35.1"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Python-tokenizers",
+      "name": "tokenizers",
+      "versionInfo": "0.22.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/tokenizers@0.22.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Model-intfloat-multilingual-e5-small",
+      "name": "intfloat/multilingual-e5-small",
+      "versionInfo": "d1d99a1efae6779390caba937d92c54b5bc70e51",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:huggingface/intfloat%2Fmultilingual-e5-small@d1d99a1efae6779390caba937d92c54b5bc70e51"
+        }
+      ],
+      "comment": "제출 런타임 포함"
+    },
+    {
+      "SPDXID": "SPDXRef-Model-Qwen-Qwen3-Embedding-0.6B",
+      "name": "Qwen/Qwen3-Embedding-0.6B",
+      "versionInfo": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:huggingface/Qwen%2FQwen3-Embedding-0.6B@97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+        }
+      ],
+      "comment": "오프라인 교사 전용이며 제출 런타임에 미포함"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-BaseImage-python-slim-bookworm"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-adduser"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-apt"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-base-files"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-base-passwd"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-bash"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-bsdutils"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-ca-certificates"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-coreutils"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-dash"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-debconf"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-debian-archive-keyring"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-debianutils"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-diffutils"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-dpkg"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-e2fsprogs"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-findutils"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-gcc-12-base-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-gpgv"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-grep"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-gzip"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-hostname"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-init-system-helpers"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libacl1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libapt-pkg6.0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libattr1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libaudit-common"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libaudit1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libblkid1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libbz2-1.0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libc-bin"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libc6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libcap-ng0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libcap2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libcom-err2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libcrypt1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libdb5.3-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libdebconfclient0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libext2fs2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libffi8-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgcc-s1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgcrypt20-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgdbm6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgmp10-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgnutls30-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgpg-error0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libgssapi-krb5-2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libhogweed6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libidn2-0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libk5crypto3-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libkeyutils1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libkrb5-3-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libkrb5support0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-liblz4-1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-liblzma5-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libmd0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libmount1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libncursesw6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libnettle8-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libnsl2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libp11-kit0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libpam-modules-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libpam-modules-bin"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libpam-runtime"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libpam0g-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libpcre2-8-0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libreadline8-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libseccomp2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libselinux1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libsemanage-common"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libsemanage2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libsepol2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libsmartcols1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libsqlite3-0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libss2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libssl3-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libstdc-6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libsystemd0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libtasn1-6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libtinfo6-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libtirpc-common"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libtirpc3-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libudev1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libunistring2-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libuuid1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libxxhash0-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-libzstd1-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-login"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-logsave"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-mawk"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-mount"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-ncurses-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-ncurses-bin"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-netbase"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-openssl"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-passwd"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-perl-base"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-readline-common"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-sed"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-sysvinit-utils"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-tar"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-tzdata"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-usr-is-merged"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-util-linux"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-util-linux-extra"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Debian-zlib1g-arm64"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Python-flatbuffers"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Python-numpy"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Python-onnxruntime"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Python-packaging"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Python-protobuf"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Python-tokenizers"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Model-intfloat-multilingual-e5-small"
+    },
+    {
+      "spdxElementId": "SPDXRef-Project-Diwoni-OSSP-2026-LLM-Router",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Model-Qwen-Qwen3-Embedding-0.6B"
+    }
+  ]
+}
