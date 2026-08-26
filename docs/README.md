@@ -29,6 +29,17 @@ SPDX-License-Identifier: Apache-2.0
 
 ## 공개 재현성·검토 자료
 
+- [FINAL_EXPERIMENT_REPORT_KO.md](FINAL_EXPERIMENT_REPORT_KO.md): 최종 채택·기각
+  실험, 점수 해석과 비용 강건성 종합
+- [FINAL_ROUTER_KO.md](FINAL_ROUTER_KO.md): E5 파인튜닝, Qwen 증류와 등급별 정책
+- [CONTAINER_VERIFICATION_KO.md](CONTAINER_VERIFICATION_KO.md): 최종 ARM64
+  반복·결정성·이미지·SBOM 증거
+- [JUDGING_EVIDENCE_KO.md](JUDGING_EVIDENCE_KO.md): 1차 서면평가 30점 항목별 증거
+- [DEMO_VIDEO_KO.md](DEMO_VIDEO_KO.md): 3분 시연 영상 대본과 촬영 체크
+- [RESULT_REPORT_DRAFT_KO.md](RESULT_REPORT_DRAFT_KO.md): 공식 결과보고서 양식에
+  옮길 5페이지 한글 원고
+- [SUBMISSION_CHECKLIST_KO.md](SUBMISSION_CHECKLIST_KO.md): 공개 전환, 익명 pull,
+  제출 사이트 최종 점검
 - [runtime-benchmark.md](runtime-benchmark.md): 공개 Train/Dev 공식 플랫폼 참고 측정
 - [APPLE_SILICON_MEASUREMENT.md](APPLE_SILICON_MEASUREMENT.md): 공식
   Apple Silicon·Colima 측정과 자원 한도 동결 절차

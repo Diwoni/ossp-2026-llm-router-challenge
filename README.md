@@ -1,216 +1,230 @@
 <!--
-SPDX-FileCopyrightText: Copyright 2026 SK TELECOM CO., LTD.
+SPDX-FileCopyrightText: Copyright 2026 Diwoni contributors
 SPDX-License-Identifier: Apache-2.0
 -->
 
-# Efficient LLM Routing Challenge
+# 예산 강건형 의미 기반 LLM 라우터
 
-**프롬프트 난이도·특성에 따라 최적 모델을 선택하는 compute-efficient routing
-오픈소스 라우터 개발 챌린지**
+**파인튜닝 E5 + Qwen 교사-학생 증류 + 배치 비용 최적화로, 프롬프트마다
+`ax31-light`, `ax31`, `axk1-think` 중 가장 효율적인 모델을 고르는 SKT 지정과제
+출품작입니다.**
 
-이 과제에서는 입력 프롬프트의 내용만 보고 다음 세 평가용 모델 프로필 중 하나를
-선택하는 라우터를 만듭니다.
+> 이 라우터는 LLM 답변을 생성하지 않습니다. 질문 내용만 읽고 평가용 모델 하나를
+> 선택합니다. 공개 Dev 재대입 숫자 하나를 최대화하기보다, 보지 못한 문제에서도
+> 비용 초과로 등급 전체가 0점이 되지 않도록 일반화·안전성·실행 재현성을 함께
+> 최적화했습니다.
 
-- `ax31-light`
-- `ax31`
-- `axk1-think`
+## 심사자를 위한 60초 요약
 
-라우터는 모델을 직접 호출하지 않습니다. 운영자는 라우터가 선택한 모델과
-미리 계산해 둔 모델별 평가 결과를 결합하여 품질과 비용을 계산합니다.
-따라서 문항마다 프롬프트 내용으로 모델 하나를 한 번 선택하며, 실시간으로
-모델 답변을 호출하거나 여러 답변을 비교하는 단계는 없습니다.
+| 항목 | 최종 근거 |
+| --- | --- |
+| 최종 구조 | 파인튜닝 E5 의미 표현 + 20개 내용 특징 + KNN + 잔차 head + Qwen 학생 + 비용 배분기 |
+| Qwen 사용 방식 | 공개 프롬프트의 오프라인 교사로만 사용, 최종 이미지는 22,894바이트 학생 계수만 포함 |
+| 공개 Dev 재대입 | **0.716420454545**, 세 등급 모두 공개 비용 통과. 숨은 점수 추정치가 아닌 패키징 회귀 검사 |
+| 일반화 신호 | 고정 Qwen 학생 후보가 공식·층화·내용군 7개 교차검증에서 **7/7 양수** |
+| 비용 강건성 | 문제군 비율·모델 비용·4회 생성 비용을 흔든 **228/228 시나리오 통과** |
+| 실행 안정성 | 공식형 ARM64 제한에서 등급별 2회 통과, 최악 64.061초/90초 |
+| 결정성 | 정상·역순 2,640문항 비교에서 누락 0, 추가 0, 선택 불일치 0 |
+| 공급망 | 고정 리비전·SHA-256, GitHub Release, SPDX 2.3 SBOM, 제3자 NOTICE |
 
-## 참가 순서
+최종 컨테이너 digest는 다음과 같습니다. 제출에는 변경 가능한 태그가 아니라 이
+전체 참조를 사용합니다.
 
-1. 이 저장소를 참가 팀의 GitHub 계정이나 조직으로 fork합니다.
-2. 공개 Train/Dev 자료와 규칙을 확인하고 baseline에서 구현을 시작합니다.
-3. `self-check`와 컨테이너 실행으로 세 등급의 선택 결과를 확인합니다.
-4. 제출할 코드 커밋을 공개하고, 그 커밋에서 `linux/arm64` 이미지를 빌드해
-   공개 레지스트리에 push합니다.
-5. 저장소 루트에 `submission-ossp-skt.json`을 추가해 별도 커밋하고, 이
-   커밋의 고정된 GitHub 스냅샷 URL을 결과보고서의 `프로젝트 등록 URL`에
-   기재합니다.
-
-로컬 clone 등 개발 방법과 브랜치 이름은 자유입니다. 다만 제출 시점부터 평가가
-끝날 때까지 평가할 fork와 커밋을 별도 권한 없이 열 수 있어야 합니다.
-수상팀은 수상일로부터 5년 동안 제출 저장소를 공개 상태로 유지해야 합니다.
-
-질문과 문서·하네스 오류 신고는 이 저장소의 GitHub Issues에서 받습니다.
-
-## 공개 Train/Dev 준비
-
-참가자에게 Train 1,760문항과 Dev 880문항을 제공합니다. 각 문항에는 라우팅
-입력과 모델별 실행 결과에서 산출한 점수 및 토큰 사용량이 포함됩니다. 일부
-원천 자료는 라이선스 조건에 따라 고정된 절차로 내려받거나 재현합니다.
-비공개 평가 자료의 구성과 분할 기준은 공개하지 않습니다.
-
-재배포 가능한 프롬프트와 모델 답변 본문을 제외한 평가 결과는 `data/train/`과
-`data/dev/`에 있습니다. 재배포가 불가한 AIME 원문은 타 repository로부터
-Train/Dev에 필요한 고정 파일만 공개 출처에서 받아 결합합니다.
-자료 생성에는 Python 3.10 이상이 필요합니다.
-
-```console
-python3 -m venv .venv-data
-.venv-data/bin/pip install -r data/sources/requirements-materialize-public-data.txt
-.venv-data/bin/python tools/materialize_public_data.py
+```text
+ghcr.io/diwoni/ossp-2026-llm-router-challenge@sha256:1913d548e33fe9fcad60eac4e33c73142c73e0b3b1754061080c941154b63829
 ```
 
-완성된 입력은 Git 비추적 경로인 `data/materialized/train/inputs.json`과
-`data/materialized/dev/inputs.json`에 생깁니다. 입력 수와 SHA-256은
-[`data/public-data.v1.json`](data/public-data.v1.json), 출처와 고지는
-[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)에서 확인할 수 있습니다.
+## 과제를 쉽게 설명하면
 
-## 라우터 실행 입력
+운영자는 각 질문에 세 모델이 과거에 얼마나 잘 답했고 토큰을 얼마나 썼는지 공개
+Train·Dev 자료로 제공합니다. 우리는 그 자료를 이용해 새 질문이 들어왔을 때
+다음을 예측합니다.
 
-입력 JSON에는 정수 `schema_version: 1`, `challenge_id`, 데이터 구분을
-나타내는 `split`, `episodes`가 들어 있습니다. 각 문항은 최대 128자인
-불투명한 `episode_id`와 다음 둘 중 하나만 포함합니다.
+1. 각 모델을 고르면 예상 품질이 얼마나 되는가?
+2. 각 모델을 고르면 예상 비용이 얼마나 되는가?
+3. 전체 질문 묶음의 비용 제한 안에서 어디에 비싼 모델을 써야 가장 이득인가?
 
-- 비어 있지 않은 `prompt`
-- `system`, `user`, `assistant` 역할과 `content`로 구성된 비어 있지 않은
-  `messages`
+`score`는 같은 모델을 2회 또는 4회 생성해 맞힌 비율이므로 0, 0.5, 1 또는
+0, 0.25, 0.5, 0.75, 1처럼 보입니다. 라우터 실행 중에는 이 정답률이나 토큰
+결과가 주어지지 않습니다. 오직 프롬프트 내용과 평가 등급만 사용합니다.
 
-공식 평가에서 벤치마크 이름, 데이터 출처, 정답, 모델 답변과 문항별 모델
-평가 결과는 라우터 실행 입력으로 제공하지 않습니다. `challenge_id`, `split`,
-`episode_id`는 실행 검증과 선택 결과의 문항 연결에만 사용하며 모델 선택에는
-사용할 수 없습니다. 해시, 정규식, n-gram, 임베딩처럼 프롬프트 내용에서 직접
-계산한 정보는 모델 선택에 사용할 수 있습니다.
+| 등급 | 비용 한도 | 최종 점수 가중치 | 최종 안전계수 |
+| --- | ---: | ---: | ---: |
+| Fast | 1.25 | 0.4 | 0.95 |
+| Balanced | 2.0 | 0.3 | 0.90 |
+| Premium | 4.0 | 0.3 | 0.78 |
 
-공개 Train/Dev에서는 프롬프트와 별도 평가 결과를 연결하고 공개 비용 정책을
-적용해 모델별 비용을 계산할 수 있습니다. 이 정보는 학습·검증과 등급별 정책
-최적화에 사용할 수 있습니다. 공식 평가 실행 때는 문항별 실제 비용이
-제공되지 않으므로, 필요한 경우 공개 정책과 프롬프트 특징으로 비용을
-추정할 수 있습니다.
+비용 한도를 넘으면 해당 등급 점수가 0점입니다. 그래서 예산 끝까지 비싼 모델을
+채우는 것보다, 숨은 분포와 토큰 비용 오차에도 살아남는 여유가 중요합니다.
 
-## 라우터 선택 결과
+## 최종 라우팅 흐름
 
-라우터는 `fast`, `balanced`, `premium` 세 등급에 대해 각각 제출 JSON을
-만듭니다. 모든 입력 문항마다 `episode_id`와 `model_id`를 정확히 한 번
-기록해야 합니다.
-
-| 등급 | 최대 비용 비율 | 최종 점수 가중치 |
-| --- | ---: | ---: |
-| Fast | 1.25 | 0.4 |
-| Balanced | 2.0 | 0.3 |
-| Premium | 4.0 | 0.3 |
-
-비용 비율은 같은 입력 전체를 `ax31-light`로 선택했을 때의 비용을 1로 둔
-상대값입니다. 한도를 넘은 등급의 점수는 0입니다.
-
-## 왜 이런 평가 방식인가요?
-
-실제 서비스에서는 앞으로 들어올 요청의 분포를 완벽하게 알 수 없으며, 모델
-서빙에도 동시성·대기열·메모리 같은 용량 한계가 있습니다. 이 과제는 공개
-Train/Dev로 정책을 개발하되 별도 입력에서도 일반화하고, 정해진 비용 안에서
-품질을 높이는 상황을 모사합니다. 예산을 넘긴 정책은 대기열 증가, 응답 시간
-목표 위반이나 서빙 실패를 일으킬 수 있는 운영 불가능한 구성으로 보아 해당
-등급을 0점 처리합니다.
-
-## Quickstart: baseline에서 시작하기
-
-별도 패키지를 설치하지 않고 toy 자료에서 baseline과 채점 흐름을 확인할 수
-있습니다. 먼저 모든 문항에 경량 모델을 선택하는 세 등급 결과를 만듭니다.
-
-```console
-PYTHONPATH=src python3 baselines/always_light.py \
-  --input data/toy/inputs.json \
-  --output-dir build/toy-submission
-
-PYTHONPATH=src python3 -m ossp_router.cli self-check \
-  --input data/toy/inputs.json \
-  --outcomes data/toy/outcomes.json \
-  --submissions build/toy-submission \
-  --report build/toy-report.json
+```mermaid
+flowchart LR
+    A["프롬프트"] --> B["파인튜닝 E5 INT8"]
+    A --> C["길이·수식·코드 등 20개 특징"]
+    B --> D["비슷한 공개 문제 KNN"]
+    B --> E["Qwen 교사를 모방한 22KB 학생"]
+    C --> F["잔차·비용 보정"]
+    D --> G["모델별 예상 품질·비용"]
+    E --> G
+    F --> G
+    G --> H["등급별 신호 혼합"]
+    H --> I["전체 배치 비용 최적화"]
+    I --> J["episode_id + model_id JSON"]
 ```
 
-첫 번째 명령은 세 등급의 선택 결과를 만들고, 두 번째 명령은 파일 형식, 문항
-누락 여부, 비용 한도와 점수를 검사합니다. 다음으로 프롬프트 길이, 언어,
-코드·수학 기호만 사용하는 baseline을 세 등급에 실행해 볼 수 있습니다.
+### 1. 파인튜닝 E5
+
+`intfloat/multilingual-e5-small`의 마지막 인코더 블록과 160차원 투영 head를 공개
+Train으로 학습했습니다. 단순한 쉬움/어려움 분류가 아니라 세 모델의 품질, 로그
+비용, 모델 간 품질 차이와 순서를 동시에 학습합니다. 긴 문제의 마지막 질문이나
+코드 `assert`를 잃지 않도록 토큰의 44%는 앞, 56%는 뒤에서 취합니다.
+
+### 2. KNN과 작은 보정기
+
+새 질문과 의미가 가까운 공개 질문을 찾아 실제 모델별 성적을 가중 평균합니다.
+E5가 놓치는 길이·코드·수식 신호는 20개 내용 특징과 작은 잔차 head가 보정합니다.
+최종 실행에서는 scikit-learn 객체 대신 내보낸 트리와 계수만 NumPy로 계산합니다.
+
+### 3. Qwen 교사-학생 증류
+
+`Qwen3-Embedding-0.6B`은 학습 시 공개 프롬프트를 표현하는 오프라인 교사로만
+사용했습니다. Qwen 표현을 E5 160차원과 내용 특징 20개만 보는 Ridge 학생에게
+옮겼습니다. 평가 컨테이너에는 Qwen 가중치, 외부 API, GPU가 없습니다.
+
+### 4. 비용을 아는 전역 배분
+
+문항별 점수만 보고 독립적으로 모델을 고르지 않습니다. 전체 입력 배치에서 예상
+품질 이득과 예상 비용을 함께 보고, 등급별 안전 예산 안에서 이득이 큰 질문부터
+비싼 모델에 배정합니다. Fast에서는 `axk1-think`를 후보에서 완전히 제거합니다.
+
+자세한 학습 인자와 수식은 [최종 라우터 설계](docs/FINAL_ROUTER_KO.md), 후보를
+채택하거나 버린 근거는 [후보 실험 보고서](docs/CANDIDATE_EXPERIMENTS_KO.md)에
+있습니다.
+
+## 점수를 읽는 올바른 방법
+
+| 수치 | 의미 | 사용 목적 |
+| ---: | --- | --- |
+| 0.695369318182 | 공식 hash-regex 공개 Dev | 공식 기준선 |
+| 0.706846590909 | Train-only E5를 공개 Dev에서 평가 | 개발 기준선 |
+| 0.717613636364 | Premium 안전계수 0.84 공개 Dev 재대입 | 스트레스 실패로 기각 |
+| **0.716420454545** | Premium 0.78 최종 공개 Dev 재대입 | 최종 패키징 회귀 검사 |
+| 0.711714015152 | 공개 Train+Dev 강건성 기준 시나리오 | 숨은 점수 예측 아님 |
+
+공개 전체로 만든 자산을 같은 Dev에 재대입한 0.71642는 실제 심사 점수의 예측값이
+아닙니다. 최종 후보를 고른 핵심 근거는 Qwen 학생의 7/7 방향 일치, 228개 비용
+스트레스 0회 실패, 입력 순서 독립성과 공식 컨테이너 실행 통과입니다.
+
+## 채택과 기각
+
+| 방법 | 판단 | 이유 |
+| --- | --- | --- |
+| 파인튜닝 E5 + 의미 KNN | 채택 | Train-only Dev 기준선을 올리고 ARM64 제한에서 실행 가능 |
+| Qwen 교사 → E5 학생 | 채택 | 7개 교차검증이 모두 양수, 런타임 추가 자산 22KB |
+| 생성 횟수 인지 GLM | 기각 | OOF는 올랐지만 고정 후 Dev가 하락 |
+| 비선형 GBM | 기각 | Premium Dev가 0.01108 하락 |
+| 문제군별 전문가 | 기각 | Dev 하락과 비용 4.099 초과 |
+| 문제군별 강제 예산 | 기각 | 안전성 일부 개선보다 Premium 품질 손실이 큼 |
+| Premium 안전 0.84 | 기각 | 228개 스트레스 중 4개 예산 실패 |
+| Premium 안전 0.78 | 채택 | 228개 모두 통과, 최악 비용비 3.973534 |
+
+경쟁 포크의 구현을 그대로 복사하지 않았습니다. yhl124의 양방향·다중 분할·비용
+스트레스 원칙과 U-S-jun/hwkim3330의 앙상블 아이디어를 각각 독립 실험하고, 현재
+파이프라인에서 검증을 통과한 원칙만 반영했습니다.
+
+## 빠른 재현
+
+### 1. 자산 내려받기와 이중 해시 검증
 
 ```console
-for tier in fast balanced premium; do
-  PYTHONPATH=src python3 baselines/prompt_heuristic.py \
-    --input data/toy/inputs.json \
-    --tier "$tier" \
-    --output "build/prompt-heuristic/$tier.json"
-done
-
-PYTHONPATH=src python3 -m ossp_router.cli self-check \
-  --input data/toy/inputs.json \
-  --outcomes data/toy/outcomes.json \
-  --submissions build/prompt-heuristic \
-  --report build/prompt-heuristic-report.json
+scripts/download_method4_assets.sh
 ```
 
-[`src/ossp_router/heuristic.py`](src/ossp_router/heuristic.py)의 특징 추출과
-`select_model`을 바꾸는 것이 가장 짧은 구현 경로입니다. 등급·문항 ID·입력
-순서가 아니라 프롬프트 내용만 모델 선택 함수에 전달하십시오. 더 강한 특징
-baseline과 공개 Train/Dev로 학습하는 예제는
-[baseline 안내](baselines/README.md)에 있습니다.
+Release 압축 SHA-256을 먼저 확인하고, 압축을 푼 뒤 10개 파일의 크기와 SHA-256을
+다시 확인합니다. 전체 자산은 636,519,519바이트입니다.
 
-정책 파일은 패키지에 포함된 동결 v1을 기본으로 사용하며, 별도 파일을
-검사할 때만 `--policy`를 지정합니다.
-
-저장소 루트에 기술 제출 정보 파일을 작성한 뒤에는 다음 명령으로 여섯 필드,
-코드 커밋 SHA, 이미지 다이제스트와 라이선스 값을 확인합니다.
+### 2. 로컬 라우터 실행
 
 ```console
-python3 tools/validate_technical_submission.py
+METHOD4_FINAL_ASSETS=build/final-assets/method4 \
+  scripts/run_final_router.sh \
+  data/materialized/dev/inputs.json balanced build/submission/balanced.json
 ```
 
-최종 이미지의 실행 시간과 자원 제한은 공개 Train/Dev 전체로 미리 확인할 수
-있습니다. 로컬 태그는 검사 시작 시 변경 불가능한 이미지 ID로 고정됩니다.
+### 3. ARM64 이미지 빌드
 
 ```console
-docker build --pull --platform linux/arm64 \
-  --file container/Dockerfile --tag my-router:check .
+scripts/prepare_method4_container_assets.sh
 
-PYTHONPATH=src python3 tools/check_runtime.py \
-  --image my-router:check \
-  --report build/runtime-check-report.json
+docker build --provenance=false --platform linux/arm64 \
+  --file container/method4.Dockerfile \
+  --build-arg SOURCE_COMMIT="$(git rev-parse HEAD)" \
+  --tag ossp-method4:local .
 ```
 
-이 검사는 위 materialization으로 만든 공개 Train 1,760문항과 Dev 880문항만
-사용합니다. 공개 모델별 outcome과 최종 평가 자료는 컨테이너에 전달하지
-않으며, 공식 장비와 다른 환경에서 측정한 시간은 참고값입니다.
+### 4. 공식형 제한 검사
 
-## 문서
+```console
+PYTHONPATH=src:. python3 tools/check_runtime.py \
+  --image ossp-method4:local \
+  --repetitions 2 \
+  --report build/method4-runtime-check.json
+```
 
-이 챌린지를 이해하는 데 가장 중요한 네 문서는 다음과 같습니다.
+시연 영상은 [3분 시연 대본](docs/DEMO_VIDEO_KO.md)의 명령을 그대로 사용합니다.
+
+## 저장소 안내
+
+| 경로 | 역할 |
+| --- | --- |
+| `experiments/method4_finetuned_encoder/` | E5 학습·ONNX 추론·KNN·잔차·증류·최종 라우팅 |
+| `experiments/validation/` | 내용군·문제군 분할과 비용 스트레스 |
+| `configs/method4-tier-gate.qwen-student.json` | 세 등급의 최종 정책과 안전계수 |
+| `container/method4.Dockerfile` | 최소 ARM64 CPU 제출 이미지 |
+| `artifacts/` | 모델 파일 manifest, Release와 이미지 digest 메타데이터 |
+| `reports/` | 채택·기각·비용·실행·SBOM 원본 JSON |
+| `scripts/` | 학습·평가·자산 검증·시연 자동화 |
+| `tests/` | 프로토콜·점수·누수·결정성·비용·런타임 테스트 |
+| `docs/` | 공식 규칙과 한글 설계·실험·제출 문서 |
+
+## 검증 증거
+
+- [최종 실험 종합](docs/FINAL_EXPERIMENT_REPORT_KO.md)
+- [최종 라우터와 파인튜닝](docs/FINAL_ROUTER_KO.md)
+- [비용 강건성 228개](docs/COST_ROBUSTNESS_KO.md)
+- [ARM64 컨테이너 검증](docs/CONTAINER_VERIFICATION_KO.md)
+- [후보 실험과 경쟁 포크 검증](docs/CANDIDATE_EXPERIMENTS_KO.md)
+- [기준선 재현](docs/BASELINE_REPRODUCTION_KO.md)
+- [제출 직전 체크리스트](docs/SUBMISSION_CHECKLIST_KO.md)
+- [서면평가 30점 근거표](docs/JUDGING_EVIDENCE_KO.md)
+
+전체 단위 테스트는 다음 명령으로 실행하며 현재 280개 통과, Docker가 필요한
+11개는 별도 실제 격리 검사 보고서로 검증했습니다.
+
+```console
+PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -p 'test_*.py'
+```
+
+## 오픈소스와 라이선스
+
+프로젝트가 직접 작성한 코드와 문서는 Apache-2.0입니다. 포함한 E5는 MIT,
+오프라인 교사 Qwen은 Apache-2.0이며, 원본 리비전·파일 SHA·변환 산출물은
+[제3자 고지](THIRD_PARTY_NOTICES.md), [자산 manifest](artifacts/method4-assets.manifest.v1.json),
+[SPDX SBOM](reports/method4-sbom.spdx.json)에 기록했습니다.
+
+개발 과정은 한국어 이슈, 논리 단위 커밋, 실험 PR로 남겼습니다. 실패한 후보도
+수치와 기각 이유를 보존하여 이후 기여자가 같은 실험을 재현하거나 다른 데이터와
+인코더로 확장할 수 있습니다.
+
+## 공식 과제 문서
 
 - [과제 규칙](docs/CHALLENGE_RULES.md)
-- [제출 안내](docs/SUBMISSION.md)
-- [컨테이너 실행 규격](docs/RUNTIME.md)
+- [점수 계산](docs/SCORING.md)
+- [컨테이너 규격](docs/RUNTIME.md)
+- [기술 제출 안내](docs/SUBMISSION.md)
 - [데이터 카드](docs/DATA_CARD.md)
 
-점수와 예외 처리가 필요할 때 참고해 주세요.
-
-- [점수 계산](docs/SCORING.md)
-- [실행 오류와 규칙 집행](docs/ENFORCEMENT.md)
-- [데이터 라이선스](DATA_LICENSES.md)
-
-공개 운영 절차와 자원 측정 근거는 [전체 문서 안내](docs/README.md)에 별도로
-모았습니다. 라우터 구현에 필요한 필수 문서는 아닙니다.
-
-출품작 제출 마감은 2026년 8월 27일 18:00(대한민국 표준시)이며,
-[공식 대회 접수 사이트](https://osscontest.kr/)의 출품작 제출 절차를 따릅니다.
-공식 결과보고서 원본 파일과 PDF를 업로드하며, 결과보고서의 `프로젝트 등록
-URL`로 공개 저장소를 제출합니다. 마감 전에는 결과보고서를 복수로 제출하거나
-자유롭게 다시 업로드할 수 있으며 마지막으로 접수된 파일을 심사합니다.
-
-`submission-ossp-skt.json`은 사이트에 별도로 업로드하지 않고 제출 저장소
-루트에 반드시 커밋합니다. 파일 형식과 최종 커밋 순서는
-[제출 안내](docs/SUBMISSION.md)에 기록합니다.
-
-## 제공 내용
-
-이 저장소에는 공개 Train/Dev 자료, 네 가지 baseline, 형식·점수 검증 도구,
-참가자용 컨테이너 예제와 공개 평가 하네스가 들어 있습니다. 공식 플랫폼은
-`linux/arm64`이며 최종 자원 한도는
-[컨테이너 실행 규격](docs/RUNTIME.md)에 동결했습니다.
-
-## 라이선스
-
-프로젝트가 직접 작성한 코드와 문서는 [Apache License 2.0](LICENSE)으로
-제공합니다. 이 라이선스는 제3자 벤치마크 자료를 재라이선스하지 않습니다.
-자료별 조건은 [DATA_LICENSES.md](DATA_LICENSES.md)에 따로 기록합니다.
+출품작 제출 마감은 **2026년 8월 27일 18:00 KST**입니다. 최종 제출 시점부터
+심사가 끝날 때까지 저장소와 이미지 digest를 별도 권한 없이 열 수 있어야 합니다.
